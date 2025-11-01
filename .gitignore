@@ -3,10 +3,6 @@
 
 # Volumes
 volumes/
-!volumes/sonarqube/
-!volumes/sonarqube/**
-volumes/sonarqube/logs/
-volumes/sonarqube/logs/**
 
 # IDE folders
 .vscode/
