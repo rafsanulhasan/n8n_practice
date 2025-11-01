@@ -1,3 +1,27 @@
+# Logs (but keep sonarqube logs for initial setup)
+*.log
+
+# Volumes
+volumes/
+volumes/**
+volumes/sonarqube/
+volumes/sonarqube/**
+
+# IDE folders
+.vscode/
+.vs/
+
+# Node modules
+node_modules/
+
+# SonarQube
+.scannerwork/
+sonar-project.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
 # .NET
 bin/
 obj/
