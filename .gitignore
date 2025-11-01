@@ -1,7 +1,11 @@
+# Logs (but keep sonarqube logs for initial setup)
+*.log
+
 # Volumes
 volumes/
 !volumes/sonarqube/
 !volumes/sonarqube/**
+!volumes/sonarqube/logs/*.log
 
 # IDE folders
 .vscode/
@@ -12,9 +16,6 @@ node_modules/
 
 # SonarQube
 .scannerwork/
-
-# Logs
-*.log
 
 # OS
 .DS_Store

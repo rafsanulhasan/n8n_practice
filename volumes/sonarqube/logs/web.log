@@ -1,0 +1,1702 @@
+2025.11.01 13:39:53 INFO  web[][o.s.p.ProcessEntryPoint] Starting Web Server
+2025.11.01 13:39:53 INFO  web[][o.s.s.a.TomcatHttpConnectorFactory] Starting Tomcat on port 9000
+2025.11.01 13:39:55 INFO  web[][o.s.s.p.LogServerVersion] SonarQube Server / 25.10.0.114319 / 16d4771251280b1b8cbbf40229e24c2b5ac83d7e
+2025.11.01 13:39:55 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+2025.11.01 13:39:55 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database started. Data stored in: /opt/sonarqube/data
+2025.11.01 13:39:55 INFO  web[][o.s.d.DefaultDatabase] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+2025.11.01 13:39:56 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Starting...
+2025.11.01 13:39:56 INFO  web[][c.z.h.p.HikariPool] HikariPool-1 - Added connection conn2: url=jdbc:h2:tcp://127.0.0.1:9092/sonar user=
+2025.11.01 13:39:56 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Start completed.
+2025.11.01 13:39:56 WARN  web[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2025.11.01 13:39:57 INFO  web[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /opt/sonarqube
+2025.11.01 13:39:57 INFO  web[][o.s.s.u.SystemPasscodeImpl] System authentication by passcode is disabled
+2025.11.01 13:39:57 INFO  web[][o.s.s.p.d.m.h.MigrationHistoryTableImpl] Creating table schema_migrations
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy C# Code Quality and Security / 10.15.0.120848 / 89326728cf637c9935206b2fa0b4b1dea083bda0
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Clean as You Code / 2.4.0.2018 / c2f7910f6ecac6faa73001eeac4bd79a2db98cd3
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Flex Code Quality and Security / 2.14.0.5032 / 005476cddc54a18b78eca55d10338702eb31e4b0
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Go Code Quality and Security / 1.28.0.3761 / 790d502c16f2c818d4032526f27c67206fe94be1
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy HTML Code Quality and Security / 3.19.0.5695 / 4d6d79c1783726575bb4d5bd72f4873e46a99e5f
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy IaC Code Quality and Security / 1.50.0.16452 / null
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JaCoCo / 1.3.0.1538 / 74a7798c7cea687c72ed9df40c93eb7ea2a58c49
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Java Advanced Code Quality Analyzer / 8.16.1.344 / 3a7e6c6f52cf8c5793d9e92d92413c4193657c26
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Java Code Quality and Security / 8.19.0.40387 / f89e3f9b4bfaa3facf236ac3edac369237389eab
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JavaScript/TypeScript/CSS Code Quality and Security / 11.4.1.34873 / 87a13b2273a393724ca1822c234b501f07588d69
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Kotlin Code Quality and Security / 3.3.0.7402 / 1beb40c315e3605c44594e752121a0ff123d2a7d
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy PHP Code Quality and Security / 3.49.0.13624 / null
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Python Code Quality and Security / 5.10.0.25429 / d270322b78e9fef1b5a59f01b55eba913ec08776
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Ruby Code Quality and Security / 1.19.0.471 / 415d28ce6fa5adf005ce5eef827cec15af9c14cf
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Rust Code Quality and Security / 1.1.0.1088 / null
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Scala Code Quality and Security / 1.19.0.484 / 97a215c0534ecba8b6bc3e32c2589cbd86452170
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Text Code Quality and Security / 2.30.0.8328 / null
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy VB.NET Code Quality and Security / 10.15.0.120848 / 89326728cf637c9935206b2fa0b4b1dea083bda0
+2025.11.01 13:39:58 INFO  web[][o.s.s.p.ServerPluginManager] Deploy XML Code Quality and Security / 2.13.0.5938 / 18b3322855f8543906e10b25f9c57d2f81276c76
+2025.11.01 13:40:06 INFO  web[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [http://localhost:9001]
+2025.11.01 13:40:07 INFO  web[][o.s.s.p.d.m.AutoDbMigration] Automatically perform DB migration on fresh install
+2025.11.01 13:40:07 INFO  web[][DbMigrations] Executing 98 DB migrations...
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 1/98 #1 'Create initial schema'...
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 1/98 #1 'Create initial schema': success | time=757ms
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 2/98 #2 'Populate initial schema'...
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 2/98 #2 'Populate initial schema': success | time=80ms
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 3/98 #202501000 'Rename 'sonar.portfolios.confidential.header' property to 'sonar.pdf.confidential.header.enabled''...
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 3/98 #202501000 'Rename 'sonar.portfolios.confidential.header' property to 'sonar.pdf.confidential.header.enabled'': success | time=7ms
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 4/98 #202501001 'Delete removed complexity measures from 'project_measures' table'...
+2025.11.01 13:40:07 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 4/98 #202501001 'Delete removed complexity measures from 'project_measures' table': success | time=18ms
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 5/98 #202501002 'Delete removed complexity metrics from 'metrics' table'...
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 5/98 #202501002 'Delete removed complexity metrics from 'metrics' table': success | time=4ms
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 6/98 #202501003 'Create index on 'rule_tags' table'...
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 6/98 #202501003 'Create index on 'rule_tags' table': success | time=9ms
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 7/98 #202501004 'Rename 'Sonar Way' without 0 new issues condition to 'Sonar Way(legacy)''...
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 7/98 #202501004 'Rename 'Sonar Way' without 0 new issues condition to 'Sonar Way(legacy)'': success | time=12ms
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 8/98 #202501005 'Create 'user_ai_tool_usages' table'...
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 8/98 #202501005 'Create 'user_ai_tool_usages' table': success | time=10ms
+2025.11.01 13:40:07 INFO  web[][DbMigrations] 9/98 #202501006 'Add 'detected_ai_code' column to 'projects' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 9/98 #202501006 'Add 'detected_ai_code' column to 'projects' table': success | time=25ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 10/98 #202501007 'Create table 'migration_logs''...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 10/98 #202501007 'Create table 'migration_logs'': success | time=10ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 11/98 #202501008 'Log message if SAML configuration is not valid'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 11/98 #202501008 'Log message if SAML configuration is not valid': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 12/98 #202501009 'Add 'inline_annotations_enabled' column to 'project_alm_settings' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 12/98 #202501009 'Add 'inline_annotations_enabled' column to 'project_alm_settings' table': success | time=11ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 13/98 #202501010 'Populate 'inline_annotations_enabled' column for Azure'...
+2025.11.01 13:40:08 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 13/98 #202501010 'Populate 'inline_annotations_enabled' column for Azure': success | time=10ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 14/98 #202501011 'Update default admin password if still hashed with BCRYPT'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 14/98 #202501011 'Update default admin password if still hashed with BCRYPT': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 15/98 #202501012 'Log message if users are still relying on BCRYPT hashed passwords'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 15/98 #202501012 'Log message if users are still relying on BCRYPT hashed passwords': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 16/98 #202502000 'Drop 'issues_dependency' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 16/98 #202502000 'Drop 'issues_dependency' table': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 17/98 #202502001 'Drop 'cve_cwe' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 17/98 #202502001 'Drop 'cve_cwe' table': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 18/98 #202502002 'Drop 'cves' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 18/98 #202502002 'Drop 'cves' table': success | time=4ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 19/98 #202502003 'Create table for SCA releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 19/98 #202502003 'Create table for SCA releases': success | time=5ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 20/98 #202502004 'Create index for SCA releases component'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 20/98 #202502004 'Create index for SCA releases component': success | time=10ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 21/98 #202502005 'Create table for SCA dependencies'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 21/98 #202502005 'Create table for SCA dependencies': success | time=10ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 22/98 #202502006 'Create index for SCA dependencies to releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 22/98 #202502006 'Create index for SCA dependencies to releases': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 23/98 #202502007 'Create table for SCA issues'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 23/98 #202502007 'Create table for SCA issues': success | time=6ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 24/98 #202502008 'Create unique index on SCA issues'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 24/98 #202502008 'Create unique index on SCA issues': success | time=9ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 25/98 #202502009 'Create table for vulnerability subtype of SCA issues'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 25/98 #202502009 'Create table for vulnerability subtype of SCA issues': success | time=12ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 26/98 #202502010 'Create table for SCA issues to releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 26/98 #202502010 'Create table for SCA issues to releases': success | time=13ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 27/98 #202502011 'Create index for SCA issues to releases to SCA issues'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 27/98 #202502011 'Create index for SCA issues to releases to SCA issues': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 28/98 #202502012 'Create index for SCA issues to releases to SCA releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 28/98 #202502012 'Create index for SCA issues to releases to SCA releases': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 29/98 #202502013 'Create unique index for SCA issues to releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 29/98 #202502013 'Create unique index for SCA issues to releases': success | time=5ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 30/98 #202502014 'Add new_in_pull_request column to SCA releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 30/98 #202502014 'Add new_in_pull_request column to SCA releases': success | time=9ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 31/98 #202502015 'Add new_in_pull_request column to SCA dependencies'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 31/98 #202502015 'Add new_in_pull_request column to SCA dependencies': success | time=10ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 32/98 #202502016 'Insert default AI Codefix provider key and modelKey properties'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 32/98 #202502016 'Insert default AI Codefix provider key and modelKey properties': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 33/98 #202502017 'Add table 'architecture_graphs''...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 33/98 #202502017 'Add table 'architecture_graphs'': success | time=6ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 34/98 #202502018 'Drop 'sca_releases_comp_uuid' index'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 34/98 #202502018 'Drop 'sca_releases_comp_uuid' index': success | time=6ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 35/98 #202502019 'Create 'sca_releases_comp_uuid_uuid' index'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 35/98 #202502019 'Create 'sca_releases_comp_uuid_uuid' index': success | time=6ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 36/98 #202502020 'Add 'sca_dependencies.production_scope' column'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 36/98 #202502020 'Add 'sca_dependencies.production_scope' column': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 37/98 #202502021 'Add declared_license_expression to SCA releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 37/98 #202502021 'Add declared_license_expression to SCA releases': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 38/98 #202502022 'Create 'uq_idx_ag_branch_type_source' for architecture graphs'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 38/98 #202502022 'Create 'uq_idx_ag_branch_type_source' for architecture graphs': success | time=14ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 39/98 #202503000 'Add known_package column to SCA releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 39/98 #202503000 'Add known_package column to SCA releases': success | time=10ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 40/98 #202503001 'Populate known_package column to SCA releases'...
+2025.11.01 13:40:08 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 40/98 #202503001 'Populate known_package column to SCA releases': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 41/98 #202503002 'Update known_package on SCA release to be not nullable'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 41/98 #202503002 'Update known_package on SCA release to be not nullable': success | time=9ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 42/98 #202503003 'Add status column to SCA issues releases join table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 42/98 #202503003 'Add status column to SCA issues releases join table': success | time=9ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 43/98 #202503004 'Populate status column to SCA issues releases join table'...
+2025.11.01 13:40:08 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 43/98 #202503004 'Populate status column to SCA issues releases join table': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 44/98 #202503005 'Update status column on SCA issues releases join table to be not nullable'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 44/98 #202503005 'Update status column on SCA issues releases join table to be not nullable': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 45/98 #202503006 'Add is_new column to SCA releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 45/98 #202503006 'Add is_new column to SCA releases': success | time=16ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 46/98 #202503007 'Add is_new column to SCA dependencies'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 46/98 #202503007 'Add is_new column to SCA dependencies': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 47/98 #202503008 'Migrate to is_new on SCA releases'...
+2025.11.01 13:40:08 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 47/98 #202503008 'Migrate to is_new on SCA releases': success | time=11ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 48/98 #202503009 'Migrate to is_new on SCA dependencies'...
+2025.11.01 13:40:08 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 48/98 #202503009 'Migrate to is_new on SCA dependencies': success | time=10ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 49/98 #202503010 'Drop new_in_pull_request column from SCA releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 49/98 #202503010 'Drop new_in_pull_request column from SCA releases': success | time=16ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 50/98 #202503011 'Drop new_in_pull_request column from SCA dependencies'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 50/98 #202503011 'Drop new_in_pull_request column from SCA dependencies': success | time=16ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 51/98 #202503012 'Add assignee to SCA issues releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 51/98 #202503012 'Add assignee to SCA issues releases': success | time=16ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 52/98 #202503013 'Create ScaIssuesReleasesHistory table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 52/98 #202503013 'Create ScaIssuesReleasesHistory table': success | time=10ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 53/98 #202503014 'Create index for sca_issues_releases UUID on changes table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 53/98 #202503014 'Create index for sca_issues_releases UUID on changes table': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 54/98 #202503015 'Update default SCA dependency issue status to OPEN from TO_REVIEW'...
+2025.11.01 13:40:08 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 54/98 #202503015 'Update default SCA dependency issue status to OPEN from TO_REVIEW': success | time=11ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 55/98 #202503016 'Create SCA license profiles table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 55/98 #202503016 'Create SCA license profiles table': success | time=5ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 56/98 #202503017 'Create SCA license profiles projects join table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 56/98 #202503017 'Create SCA license profiles projects join table': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 57/98 #202503018 'Create unique index on SCA license profiles projects join table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 57/98 #202503018 'Create unique index on SCA license profiles projects join table': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 58/98 #202503019 'Create SCA license profile customizations table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 58/98 #202503019 'Create SCA license profile customizations table': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 59/98 #202503020 'Create SCA license profile categories table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 59/98 #202503020 'Create SCA license profile categories table': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 60/98 #202503021 'Create unique index on SCA license profile categories table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 60/98 #202503021 'Create unique index on SCA license profile categories table': success | time=6ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 61/98 #202503022 'Create unique index on SCA license profile customizations table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 61/98 #202503022 'Create unique index on SCA license profile customizations table': success | time=6ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 62/98 #202503023 'Create unique index on SCA license profiles table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 62/98 #202503023 'Create unique index on SCA license profiles table': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 63/98 #202503024 'Create SCA encountered licenses table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 63/98 #202503024 'Create SCA encountered licenses table': success | time=6ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 64/98 #202503025 'Create SCA encountered licenses unique index'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 64/98 #202503025 'Create SCA encountered licenses unique index': success | time=5ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 65/98 #202503026 'Add change_comment to SCA issues releases changes'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 65/98 #202503026 'Add change_comment to SCA issues releases changes': success | time=12ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 66/98 #202503027 'Drop change_type from SCA issues releases changes'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 66/98 #202503027 'Drop change_type from SCA issues releases changes': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 67/98 #202503028 'Remove duplicates from SCA releases table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 67/98 #202503028 'Remove duplicates from SCA releases table': success | time=11ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 68/98 #202503029 'Create unique index on SCA releases table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 68/98 #202503029 'Create unique index on SCA releases table': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 69/98 #202503030 'Create SCA analyses table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 69/98 #202503030 'Create SCA analyses table': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 70/98 #202503031 'Create unique index on SCA analyses table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 70/98 #202503031 'Create unique index on SCA analyses table': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 71/98 #202503032 'Add 'analysis_uuid' column to 'architecture_graphs' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 71/98 #202503032 'Add 'analysis_uuid' column to 'architecture_graphs' table': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 72/98 #202503033 'Add 'perspective_key' column to 'architecture_graphs' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 72/98 #202503033 'Add 'perspective_key' column to 'architecture_graphs' table': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 73/98 #202503034 'Drop unique index on 'architecture_graphs' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 73/98 #202503034 'Drop unique index on 'architecture_graphs' table': success | time=5ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 74/98 #202503035 'Rename column 'source' to 'ecosystem' on 'architecture_graphs' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 74/98 #202503035 'Rename column 'source' to 'ecosystem' on 'architecture_graphs' table': success | time=11ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 75/98 #202503036 'Create unique index on 'architecture_graphs' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 75/98 #202503036 'Create unique index on 'architecture_graphs' table': success | time=6ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 76/98 #202503037 'Add previous_manual_status to SCA issues releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 76/98 #202503037 'Add previous_manual_status to SCA issues releases': success | time=9ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 77/98 #202503038 'Add 'graph_version' column to 'architecture_graphs' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 77/98 #202503038 'Add 'graph_version' column to 'architecture_graphs' table': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 78/98 #202503039 'Add assignee name to SCA issues releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 78/98 #202503039 'Add assignee name to SCA issues releases': success | time=9ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 79/98 #202503040 'Drop assignee name from SCA issues releases'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 79/98 #202503040 'Drop assignee name from SCA issues releases': success | time=11ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 80/98 #202503041 'Remove AssigneeName from Sca issue release changes'...
+2025.11.01 13:40:08 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 80/98 #202503041 'Remove AssigneeName from Sca issue release changes': success | time=13ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 81/98 #202503042 'Remove non-canonical from Sca encountered licenses'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 81/98 #202503042 'Remove non-canonical from Sca encountered licenses': success | time=4ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 82/98 #202503043 'Add 'policy_updated_at' to Sca license profiles'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 82/98 #202503043 'Add 'policy_updated_at' to Sca license profiles': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 83/98 #202503044 'Populate 'policy_updated_at' column for Sca license profiles'...
+2025.11.01 13:40:08 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 83/98 #202503044 'Populate 'policy_updated_at' column for Sca license profiles': success | time=11ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 84/98 #202503045 'Update 'policy_updated_at' column for Sca license profiles to be not nullable'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 84/98 #202503045 'Update 'policy_updated_at' column for Sca license profiles to be not nullable': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 85/98 #202504000 'Add 'withdrawn' column to 'sca_vulnerability_issues' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 85/98 #202504000 'Add 'withdrawn' column to 'sca_vulnerability_issues' table': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 86/98 #202504001 'Add 'organization_uuid' column to 'sca_license_profiles' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 86/98 #202504001 'Add 'organization_uuid' column to 'sca_license_profiles' table': success | time=10ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 87/98 #202504002 'Drop unique index from 'sca_license_profiles''...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 87/98 #202504002 'Drop unique index from 'sca_license_profiles'': success | time=5ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 88/98 #202504003 'Create unique index from 'sca_license_profiles''...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 88/98 #202504003 'Create unique index from 'sca_license_profiles'': success | time=5ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 89/98 #202504004 'Add index on 'alm_repo' column in 'project_alm_settings' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 89/98 #202504004 'Add index on 'alm_repo' column in 'project_alm_settings' table': success | time=6ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 90/98 #202504005 'Add 'original_severity' and 'manual_severity' columns to 'sca_issues_releases' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 90/98 #202504005 'Add 'original_severity' and 'manual_severity' columns to 'sca_issues_releases' table': success | time=18ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 91/98 #202504006 'Populate 'original_severity' column for 'sca_issues_releases' table'...
+2025.11.01 13:40:08 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 91/98 #202504006 'Populate 'original_severity' column for 'sca_issues_releases' table': success | time=12ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 92/98 #202504007 'Update 'original_severity' column to be not nullable in 'sca_issues_releases' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 92/98 #202504007 'Update 'original_severity' column to be not nullable in 'sca_issues_releases' table': success | time=10ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 93/98 #202504008 'Update size of 'name' column in 'rules' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 93/98 #202504008 'Update size of 'name' column in 'rules' table': success | time=6ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 94/98 #202504009 'Add 'show_increased_severity_warning' column to 'sca_issues_releases' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 94/98 #202504009 'Add 'show_increased_severity_warning' column to 'sca_issues_releases' table': success | time=8ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 95/98 #202504010 'Add 'analysis_parameters' column to 'sca_analyses' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 95/98 #202504010 'Add 'analysis_parameters' column to 'sca_analyses' table': success | time=9ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 96/98 #202505000 'Add 'published_on' column to 'sca_vulnerability_issues' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 96/98 #202505000 'Add 'published_on' column to 'sca_vulnerability_issues' table': success | time=7ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 97/98 #202505001 'Add 'from_sonarqube_update' column to 'issues' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 97/98 #202505001 'Add 'from_sonarqube_update' column to 'issues' table': success | time=10ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 98/98 #202505002 'Add 'internal_tags' column to 'issues' table'...
+2025.11.01 13:40:08 INFO  web[][DbMigrations] 98/98 #202505002 'Add 'internal_tags' column to 'issues' table': success | time=11ms
+2025.11.01 13:40:08 INFO  web[][DbMigrations] Executed 98/98 DB migrations: success | time=1915ms
+2025.11.01 13:40:09 INFO  web[][o.s.s.p.Platform] Database has been automatically updated
+2025.11.01 13:40:09 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@7e2bd5e6 [pattern=UrlPattern{inclusions=[/api/system/migrate_db.*, ...], exclusions=[/api/components/update_key, ...]}]
+2025.11.01 13:40:09 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.NoCacheFilter@4c6bba7d [pattern=UrlPattern{inclusions=[/api/v2/*], exclusions=[]}]
+2025.11.01 13:40:09 INFO  web[][o.s.s.p.DetectPluginChange] Detect plugin changes
+2025.11.01 13:40:09 INFO  web[][o.s.s.s.PropertiesDBCleaner] Clean up properties from db
+2025.11.01 13:40:11 INFO  web[][o.h.v.i.util.Version] HV000001: Hibernate Validator 9.0.1.Final
+2025.11.01 13:40:12 INFO  web[][o.s.s.e.IndexCreator] Create index [metadatas]
+2025.11.01 13:40:14 INFO  web[][o.s.s.e.IndexCreator] Create mapping metadatas
+2025.11.01 13:40:14 INFO  web[][o.s.s.e.IndexCreator] Create index [components]
+2025.11.01 13:40:19 INFO  web[][o.s.s.e.IndexCreator] Create mapping components
+2025.11.01 13:40:19 INFO  web[][o.s.s.e.IndexCreator] Create index [projectmeasures]
+2025.11.01 13:40:22 INFO  web[][o.s.s.e.IndexCreator] Create mapping projectmeasures
+2025.11.01 13:40:23 INFO  web[][o.s.s.e.IndexCreator] Create index [rules]
+2025.11.01 13:40:25 INFO  web[][o.s.s.e.IndexCreator] Create mapping rules
+2025.11.01 13:40:26 INFO  web[][o.s.s.e.IndexCreator] Create index [issues]
+2025.11.01 13:40:31 INFO  web[][o.s.s.e.IndexCreator] Create mapping issues
+2025.11.01 13:40:31 INFO  web[][o.s.s.e.IndexCreator] Create index [views]
+2025.11.01 13:40:35 INFO  web[][o.s.s.e.IndexCreator] Create mapping views
+2025.11.01 13:40:36 INFO  web[][o.s.s.s.LogServerId] Server ID: 147B411E-AZo_pZtHZYbyPRp5CJvo
+2025.11.01 13:40:36 INFO  web[][o.o.c.c.InitializationService] Initializing OpenSAML using the Java Services API
+2025.11.01 13:40:37 INFO  web[][o.o.x.a.AlgorithmRegistry] Algorithm failed runtime support check, will not be usable: http://www.w3.org/2001/04/xmlenc#ripemd160
+2025.11.01 13:40:37 INFO  web[][o.o.x.a.AlgorithmRegistry] Algorithm failed runtime support check, will not be usable: http://www.w3.org/2001/04/xmldsig-more#hmac-ripemd160
+2025.11.01 13:40:37 INFO  web[][o.o.x.a.AlgorithmRegistry] Algorithm failed runtime support check, will not be usable: http://www.w3.org/2001/04/xmldsig-more#rsa-ripemd160
+2025.11.01 13:40:38 WARN  web[][o.s.s.a.LogOAuthWarning] For security reasons, OAuth authentication should use HTTPS. You should set the property 'Administration > Configuration > Server base URL' to an HTTPS URL.
+2025.11.01 13:40:38 INFO  web[][o.s.s.p.UpdateCenterClient] Update center: https://downloads.sonarsource.com/sonarqube/update/update-center.properties
+2025.11.01 13:40:40 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired session tokens has removed 0 elements
+2025.11.01 13:40:40 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired SAML message ids has removed 0 elements
+2025.11.01 13:40:40 INFO  web[][o.s.s.n.NotificationDaemon] Notification service started (delay 60 sec.)
+2025.11.01 13:40:40 INFO  web[][o.s.t.TelemetryDaemon] Sharing of SonarQube statistics is enabled.
+2025.11.01 13:40:43 INFO  web[][o.s.s.r.r.RulesRegistrant] Register rules
+2025.11.01 13:42:00 INFO  web[][o.s.s.s.RegisterMetrics] Register metrics
+2025.11.01 13:42:00 INFO  web[][o.s.s.q.RegisterQualityGates] Quality Gate's conditions of [Sonar way] has been updated
+2025.11.01 13:42:00 INFO  web[][o.s.s.q.b.BuiltInQProfileRepositoryImpl] Load quality profiles
+2025.11.01 13:42:01 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register quality profiles
+2025.11.01 13:42:01 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile kubernetes/Sonar way
+2025.11.01 13:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile css/Sonar way
+2025.11.01 13:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile scala/Sonar way
+2025.11.01 13:42:03 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile jsp/Sonar way
+2025.11.01 13:42:03 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile js/Sonar way
+2025.11.01 13:42:04 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile py/Sonar way
+2025.11.01 13:42:05 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile docker/Sonar way
+2025.11.01 13:42:06 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile rust/Sonar way
+2025.11.01 13:42:06 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile java/Sonar way
+2025.11.01 13:42:07 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile web/Sonar way
+2025.11.01 13:42:08 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile flex/Sonar way
+2025.11.01 13:42:09 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile xml/Sonar way
+2025.11.01 13:42:10 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile json/Sonar way
+2025.11.01 13:42:10 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile ipynb/Sonar way
+2025.11.01 13:42:11 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile text/Sonar way
+2025.11.01 13:42:13 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile vbnet/Sonar way
+2025.11.01 13:42:14 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile cloudformation/Sonar way
+2025.11.01 13:42:14 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile yaml/Sonar way
+2025.11.01 13:42:14 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile kotlin/Sonar way
+2025.11.01 13:42:15 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile go/Sonar way
+2025.11.01 13:42:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile secrets/Sonar way
+2025.11.01 13:42:17 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile ruby/Sonar way
+2025.11.01 13:42:18 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile cs/Sonar way
+2025.11.01 13:42:18 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile php/Sonar way
+2025.11.01 13:42:19 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile terraform/Sonar way
+2025.11.01 13:42:20 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile azureresourcemanager/Sonar way
+2025.11.01 13:42:20 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile ts/Sonar way
+2025.11.01 13:42:21 INFO  web[][o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2025.11.01 13:42:21 INFO  web[][o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2025.11.01 13:42:21 INFO  web[][o.s.s.s.RegisterPlugins] Register plugins
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.SonarQubeIdeConnectionFilter@720e9ca0 [pattern=UrlPattern{inclusions=[/api/*], exclusions=[/api/v2/*]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@670a28f7 [pattern=UrlPattern{inclusions=[/api/issues/delete_comment.*, ...], exclusions=[/api/authentication/login.*, ...]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.NoCacheFilter@46f6b2c [pattern=UrlPattern{inclusions=[/api/v2/*], exclusions=[]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceReroutingFilter@3f86dc91 [pattern=UrlPattern{inclusions=[/api/components/update_key, ...], exclusions=[]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.DefaultAdminCredentialsVerifierFilter@39ebbc5d [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@f106607 [pattern=UrlPattern{inclusions=[/sessions/init/*], exclusions=[]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.SamlValidationRedirectionFilter@70d94ac2 [pattern=UrlPattern{inclusions=[/oauth2/callback/saml], exclusions=[]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@7932721c [pattern=UrlPattern{inclusions=[/oauth2/callback/*], exclusions=[]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ResetPasswordFilter@1d5f3033 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LoginAction@79a49835 [pattern=UrlPattern{inclusions=[/api/authentication/login], exclusions=[]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LogoutAction@4ea8bfdc [pattern=UrlPattern{inclusions=[/api/authentication/logout], exclusions=[]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.ValidateAction@2edbcb4d [pattern=UrlPattern{inclusions=[/api/authentication/validate], exclusions=[]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationInitAction@3dd1331c [pattern=UrlPattern{inclusions=[/saml/validation_init], exclusions=[]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationAction@5114495f [pattern=UrlPattern{inclusions=[/saml/validation], exclusions=[]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.user.ws.ChangePasswordAction@11735dc1 [pattern=UrlPattern{inclusions=[/api/users/change_password], exclusions=[]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.plugins.PluginsRiskConsentFilter@2b469a77 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2025.11.01 13:42:21 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [projectmeasures/auth/projectmeasure]...
+2025.11.01 13:42:22 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [projectmeasures/auth/projectmeasure] done | time=681ms
+2025.11.01 13:42:22 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [components/auth/component]...
+2025.11.01 13:42:22 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [components/auth/component] done | time=627ms
+2025.11.01 13:42:22 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [views/view]...
+2025.11.01 13:42:24 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [views/view] done | time=1304ms
+2025.11.01 13:42:24 INFO  web[][o.s.s.e.IndexerStartupTask] Trigger asynchronous indexing of type [issues/auth/issue]...
+2025.11.01 13:42:24 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] 0 pending indexing task found to be deleted...
+2025.11.01 13:42:24 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] 0 completed indexing task found to be deleted...
+2025.11.01 13:42:24 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] Indexing task deletion complete.
+2025.11.01 13:42:24 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] Deleting tasks characteristics...
+2025.11.01 13:42:24 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] Tasks characteristics deletion complete.
+2025.11.01 13:42:24 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] 0 branch found in need of issue sync.
+2025.11.01 13:42:24 INFO  web[][o.s.s.e.IndexerStartupTask] Trigger asynchronous indexing of type [issues/auth/issue] done | time=363ms
+2025.11.01 13:42:24 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of types [components/auth],[projectmeasures/auth],[issues/auth]...
+2025.11.01 13:42:25 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of types [components/auth],[projectmeasures/auth],[issues/auth] done | time=1147ms
+2025.11.01 13:42:25 INFO  web[][o.s.s.p.p.PlatformLevelStartup] Running Community Edition
+2025.11.01 13:42:25 INFO  web[][o.s.s.p.Platform] Web Server is operational
+2025.11.01 14:17:51 WARN  web[0ae64788-8366-435d-9e2e-9af6fb1cb69b][o.s.s.a.GithubWebhookAuthentication] Unauthenticated calls from GitHub are forbidden. A webhook secret must be defined in the GitHub App with Id 2217814.
+2025.11.01 14:33:02 WARN  web[2eb3358e-e1a1-4d53-8ef7-3d521a20e8ff][o.s.s.a.GithubWebhookAuthentication] Unauthenticated calls from GitHub are forbidden. A webhook secret must be defined in the GitHub App with Id 2217814.
+2025.11.01 14:34:01 WARN  web[628a9157-95ec-4493-a1dc-635871c04df4][o.s.s.a.GithubWebhookAuthentication] Unauthenticated calls from GitHub are forbidden. A webhook secret must be defined in the GitHub App with Id 2217814.
+2025.11.01 14:34:09 WARN  web[6abff310-3c5e-4ca2-9cb5-d19627c550a8][o.s.s.a.GithubWebhookAuthentication] Unauthenticated calls from GitHub are forbidden. A webhook secret must be defined in the GitHub App with Id 2217814.
+2025.11.01 14:34:24 WARN  web[59d06fae-3dfd-4f36-9656-d13b8021af4f][o.s.s.a.GithubWebhookAuthentication] Unauthenticated calls from GitHub are forbidden. A webhook secret must be defined in the GitHub App with Id 2217814.
+2025.11.01 14:35:18 WARN  web[616c644b-da13-4416-ac7e-5cacf073e710][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:35:18 ERROR web[616c644b-da13-4416-ac7e-5cacf073e710][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:35:20 WARN  web[d93dbe14-b7d5-4aa6-9304-5ff093a1fd8b][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:35:20 ERROR web[d93dbe14-b7d5-4aa6-9304-5ff093a1fd8b][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:35:22 WARN  web[62beb5f0-d5fb-4727-905a-3fc05345ffac][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:35:22 ERROR web[62beb5f0-d5fb-4727-905a-3fc05345ffac][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:37:33 WARN  web[15283a35-3323-4322-bbe6-3fd9232a778e][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:37:33 ERROR web[15283a35-3323-4322-bbe6-3fd9232a778e][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:37:34 WARN  web[e806f704-db05-4d76-91af-b73cb1e5bcdb][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:37:34 ERROR web[e806f704-db05-4d76-91af-b73cb1e5bcdb][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:37:36 WARN  web[d302ec70-831a-4903-beea-4d894792bbd7][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:37:36 ERROR web[d302ec70-831a-4903-beea-4d894792bbd7][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:43:28 WARN  web[34d723b1-3ee0-428a-8e3a-48a3fbe04ac3][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:43:28 ERROR web[34d723b1-3ee0-428a-8e3a-48a3fbe04ac3][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:43:30 WARN  web[86d6e65b-e45e-4979-8b93-bb7ee3862e40][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:43:30 ERROR web[86d6e65b-e45e-4979-8b93-bb7ee3862e40][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:43:32 WARN  web[4f2aaa1a-8b9b-476c-a52e-67dbd8b21640][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:43:32 ERROR web[4f2aaa1a-8b9b-476c-a52e-67dbd8b21640][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:47:35 WARN  web[5d39e84c-c57c-4373-8129-494272d77f5b][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:47:35 ERROR web[5d39e84c-c57c-4373-8129-494272d77f5b][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:47:36 WARN  web[63163b08-0cc3-4b11-9334-0dc0365ca8a1][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:47:36 ERROR web[63163b08-0cc3-4b11-9334-0dc0365ca8a1][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:47:38 WARN  web[261fd807-0dee-4e88-8c44-3c4150d14c93][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:47:38 ERROR web[261fd807-0dee-4e88-8c44-3c4150d14c93][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:49:43 WARN  web[1fa178a3-fc48-4498-8a97-925457b11ec3][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:49:43 ERROR web[1fa178a3-fc48-4498-8a97-925457b11ec3][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:49:44 WARN  web[f6059df7-74e4-4c11-a77d-bc530f8daed8][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:49:44 ERROR web[f6059df7-74e4-4c11-a77d-bc530f8daed8][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:49:46 WARN  web[bcc2b537-507f-4a88-97d8-5a302d77d0c1][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:49:46 ERROR web[bcc2b537-507f-4a88-97d8-5a302d77d0c1][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:51:42 WARN  web[da02ab9c-9248-4fbb-aa2b-cb775264e16f][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:51:42 ERROR web[da02ab9c-9248-4fbb-aa2b-cb775264e16f][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:51:43 WARN  web[bdd30592-bd80-4531-a925-5214fe45b04c][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:51:43 ERROR web[bdd30592-bd80-4531-a925-5214fe45b04c][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:51:45 WARN  web[40985a65-acfb-426f-ab92-2efe8fdf1dc2][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:51:45 ERROR web[40985a65-acfb-426f-ab92-2efe8fdf1dc2][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:51:58 WARN  web[4af92af6-9bdb-446f-85e5-ad43ba4ea3b7][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:51:58 ERROR web[4af92af6-9bdb-446f-85e5-ad43ba4ea3b7][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:52:00 WARN  web[482fc1dc-9429-4e5f-a434-bf354fbcd884][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:52:00 ERROR web[482fc1dc-9429-4e5f-a434-bf354fbcd884][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:52:01 WARN  web[fa59c587-063a-4ea6-89e4-83ddb6f982a3][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:52:01 ERROR web[fa59c587-063a-4ea6-89e4-83ddb6f982a3][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:52:03 WARN  web[4804cfe0-236c-40ee-b1d7-167a69f30bae][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:52:03 ERROR web[4804cfe0-236c-40ee-b1d7-167a69f30bae][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025.11.01 14:52:05 WARN  web[0d8aa3a4-6f1b-4114-8fbb-33e568908f1f][o.s.w.s.PageNotFound] No mapping for GET /api/v2/entitlements/purchasable-features
+2025.11.01 14:52:05 ERROR web[0d8aa3a4-6f1b-4114-8fbb-33e568908f1f][o.s.s.v.c.RestResponseEntityExceptionHandler] Resource not found.
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/v2/entitlements/purchasable-features.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1305)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.sonar.server.platform.web.ApiV2Servlet.service(ApiV2Servlet.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:130)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:79)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:167)
+	at org.sonar.server.platform.web.MasterServletFilter$HttpFilterChainAdapter.doFilter(MasterServletFilter.java:208)
+	at org.sonar.server.platform.web.NoCacheFilter.doFilter(NoCacheFilter.java:34)
+	at org.sonar.server.platform.web.MasterServletFilter$JavaxFilterAdapter.doFilter(MasterServletFilter.java:194)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:165)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:83)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CspFilter.doFilter(CspFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:60)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.EndpointPathFilter.doFilter(EndpointPathFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:115)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:109)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:79)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:268)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:396)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1773)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:59)
+	at java.base/java.lang.Thread.run(Unknown Source)
