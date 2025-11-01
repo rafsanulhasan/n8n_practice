@@ -6,6 +6,17 @@ services:
     volumes:
       - ./volumes/.n8n:/home/node/.n8n:rw
     restart: unless-stopped
+  sonarqube:
+    image: sonarqube:latest
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    volumes:
+      - ./volumes/sonarqube/data:/opt/sonarqube/data
+      - ./volumes/sonarqube/logs:/opt/sonarqube/logs
+      - ./volumes/sonarqube/extensions:/opt/sonarqube/extensions
+    restart: unless-stopped
   gateway:
     image: docker/mcp-gateway
     container_name: gateway
