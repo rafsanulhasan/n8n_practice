@@ -3,6 +3,9 @@
 
 # Volumes
 volumes/
+volumes/**
+volumes/sonarqube/
+volumes/sonarqube/**
 
 # IDE folders
 .vscode/
