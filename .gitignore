@@ -3,7 +3,6 @@
 
 # Volumes
 volumes/
-!volumes/sonarqube/data/*.db
 
 # IDE folders
 .vscode/
