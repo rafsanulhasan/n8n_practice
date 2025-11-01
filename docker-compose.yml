@@ -1,0 +1,39 @@
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    ports:
+      - "5678:5678"
+    volumes:
+      - ./volumes/.n8n:/home/node/.n8n:rw
+    restart: unless-stopped
+  sonarqube:
+    image: sonarqube:latest
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    volumes:
+      - ./volumes/sonarqube/data:/opt/sonarqube/data
+      - ./volumes/sonarqube/logs:/opt/sonarqube/logs
+      - ./volumes/sonarqube/extensions:/opt/sonarqube/extensions
+    restart: unless-stopped
+  gateway:
+    image: docker/mcp-gateway
+    container_name: gateway
+    ports:
+      - "9011:9011"
+    command:
+      - --transport=streaming
+      - --servers=duckduckgo,fetch
+      - --verbose=true
+      - --port=9011
+      - --config=/mcp_configs
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+    configs:
+      - mcp_configs
+configs:
+  mcp_configs:
+    content: |
+      oauth:
+        mcp-oauth-dcr: disabled

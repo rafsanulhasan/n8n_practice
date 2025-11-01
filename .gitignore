@@ -87,3 +87,24 @@ $RECYCLE.BIN/
 *.tmp
 tmp/
 temp/
+# Volumes
+volumes/
+!volumes/sonarqube/
+!volumes/sonarqube/**
+
+# IDE folders
+.vscode/
+.vs/
+
+# Node modules
+node_modules/
+
+# SonarQube
+.scannerwork/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
