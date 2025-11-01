@@ -5,7 +5,7 @@
 volumes/
 !volumes/sonarqube/
 !volumes/sonarqube/**
-!volumes/sonarqube/logs/*.log
+volumes/sonarqube/logs
 
 # IDE folders
 .vscode/
