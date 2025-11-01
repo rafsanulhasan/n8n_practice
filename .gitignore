@@ -1,8 +1,7 @@
 # Volumes
 volumes/
-!volumes/sonarqube/data
-!volumes/sonarqube/logs
-!volumes/sonarqube/extensions
+!volumes/sonarqube/
+!volumes/sonarqube/**
 
 # IDE folders
 .vscode/
