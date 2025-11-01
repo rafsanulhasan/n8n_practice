@@ -16,6 +16,7 @@ node_modules/
 
 # SonarQube
 .scannerwork/
+sonar-project.properties
 
 # OS
 .DS_Store
