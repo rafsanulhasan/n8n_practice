@@ -53,9 +53,18 @@ namespace N8nWebhookClient.Services
                     };
                 }
             }
-            catch (Exception ex)
+            catch (HttpRequestException ex)
             {
-                _logger.LogError(ex, "Error triggering webhook");
+                _logger.LogError(ex, "HTTP request error triggering webhook");
+                return new WebhookResponse<T>
+                {
+                    Success = false,
+                    ErrorMessage = ex.Message
+                };
+            }
+            catch (JsonException ex)
+            {
+                _logger.LogError(ex, "JSON serialization/deserialization error triggering webhook");
                 return new WebhookResponse<T>
                 {
                     Success = false,

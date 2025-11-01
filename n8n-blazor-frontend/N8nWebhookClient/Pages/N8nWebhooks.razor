@@ -156,16 +156,16 @@
 
             var response = await WebhookService.TriggerWebhookAsync<SimpleWebhookResponse>(simpleWebhookUrl, request);
             
-            if (response.Success)
-            {
-                simpleResponse = System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
-            }
-            else
-            {
-                simpleResponse = $"Error: {response.ErrorMessage}\n\nRaw Response:\n{response.RawResponse}";
-            }
+            simpleResponse = response.Success
+                ? System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true })
+                : $"Error: {response.ErrorMessage}\n\nRaw Response:\n{response.RawResponse}";
         }
-        catch (Exception ex)
+        catch (Exception ex) when (
+            !(ex is System.StackOverflowException) &&
+            !(ex is System.OutOfMemoryException) &&
+            !(ex is System.Threading.ThreadAbortException) &&
+            !(ex is System.AccessViolationException)
+        )
         {
             simpleResponse = $"Exception: {ex.Message}";
         }
@@ -191,14 +191,9 @@
 
             var response = await WebhookService.TriggerWebhookAsync<UserRegistrationResponse>(registrationWebhookUrl, request);
             
-            if (response.Success)
-            {
-                registrationResponse = System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
-            }
-            else
-            {
-                registrationResponse = $"Error: {response.ErrorMessage}\n\nRaw Response:\n{response.RawResponse}";
-            }
+            registrationResponse = response.Success
+                ? System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true })
+                : $"Error: {response.ErrorMessage}\n\nRaw Response:\n{response.RawResponse}";
         }
         catch (Exception ex) when (
             !(ex is System.StackOverflowException) &&
@@ -234,16 +229,16 @@
 
             var response = await WebhookService.TriggerWebhookAsync<DataProcessingResponse>(dataProcessingUrl, request);
             
-            if (response.Success)
-            {
-                dataProcessingResponse = System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
-            }
-            else
-            {
-                dataProcessingResponse = $"Error: {response.ErrorMessage}\n\nRaw Response:\n{response.RawResponse}";
-            }
+            dataProcessingResponse = response.Success
+                ? System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true })
+                : $"Error: {response.ErrorMessage}\n\nRaw Response:\n{response.RawResponse}";
         }
-        catch (Exception ex)
+        catch (Exception ex) when (
+            !(ex is System.StackOverflowException) &&
+            !(ex is System.OutOfMemoryException) &&
+            !(ex is System.Threading.ThreadAbortException) &&
+            !(ex is System.AccessViolationException)
+        )
         {
             dataProcessingResponse = $"Exception: {ex.Message}";
         }
