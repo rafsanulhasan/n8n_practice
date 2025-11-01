@@ -19,7 +19,7 @@ namespace N8nWebhookClient.Services
             try
             {
                 var json = JsonSerializer.Serialize(payload);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                using var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 _logger.LogInformation($"Sending webhook request to: {webhookUrl}");
                 
