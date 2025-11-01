@@ -200,7 +200,12 @@
                 registrationResponse = $"Error: {response.ErrorMessage}\n\nRaw Response:\n{response.RawResponse}";
             }
         }
-        catch (Exception ex)
+        catch (Exception ex) when (
+            !(ex is System.StackOverflowException) &&
+            !(ex is System.OutOfMemoryException) &&
+            !(ex is System.Threading.ThreadAbortException) &&
+            !(ex is System.AccessViolationException)
+        )
         {
             registrationResponse = $"Exception: {ex.Message}";
         }
