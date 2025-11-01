@@ -1,0 +1,1 @@
+docker run --rm -e SONAR_TOKEN=<your-local-token> --network=host -v "${PWD}:/usr/src" sonarsource/sonar-scanner-cli
