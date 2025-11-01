@@ -1,0 +1,19 @@
+# Volumes
+volumes/
+
+# IDE folders
+.vscode/
+.vs/
+
+# Node modules
+node_modules/
+
+# SonarQube
+.scannerwork/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
