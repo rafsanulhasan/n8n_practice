@@ -20,7 +20,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// Extract and transform the data\nconst inputData = $input.item.json;\n\n// Transform the data\nconst transformedData = {\n  originalData: inputData,\n  processedData: {\n    items: Array.isArray(inputData.items) ? inputData.items.map(item => ({\n      ...item,\n      processedAt: new Date().toISOString(),\n      status: 'processed'\n    })) : [],\n    totalCount: Array.isArray(inputData.items) ? inputData.items.length : 0,\n    processingTimestamp: new Date().toISOString()\n  }\n};\n\nreturn transformedData;"
+        "jsCode": "// Extract and transform the data\nconst inputData = $input.item.json;\nconst items = Array.isArray(inputData.items) ? inputData.items : [];\n\n// Transform the data\nconst transformedData = {\n  originalData: inputData,\n  processedData: {\n    items: items.map(item => ({\n      ...item,\n      processedAt: new Date().toISOString(),\n      status: 'processed'\n    })),\n    totalCount: items.length,\n    processingTimestamp: new Date().toISOString()\n  }\n};\n\nreturn transformedData;"
       },
       "id": "code-node-5",
       "name": "Transform Data",
