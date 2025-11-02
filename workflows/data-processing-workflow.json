@@ -1,0 +1,106 @@
+{
+  "name": "Data Processing Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "process-data",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-node-3",
+      "name": "Data Processing Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ],
+      "webhookId": "process-data"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract and transform the data\nconst inputData = $input.item.json;\nconst items = Array.isArray(inputData.items) ? inputData.items : [];\n\n// Transform the data\nconst transformedData = {\n  originalData: inputData,\n  processedData: {\n    items: items.map(item => ({\n      ...item,\n      processedAt: new Date().toISOString(),\n      status: 'processed'\n    })),\n    totalCount: items.length,\n    processingTimestamp: new Date().toISOString()\n  }\n};\n\nreturn transformedData;"
+      },
+      "id": "code-node-5",
+      "name": "Transform Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Calculate statistics on the processed data\nconst data = $input.item.json.processedData;\n\nconst stats = {\n  totalItems: data.totalCount,\n  processedAt: data.processingTimestamp,\n  summary: `Successfully processed ${data.totalCount} items`\n};\n\nreturn {\n  ...data,\n  statistics: stats\n};"
+      },
+      "id": "code-node-6",
+      "name": "Calculate Statistics",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        650,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}"
+      },
+      "id": "respond-node-3",
+      "name": "Send Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Data Processing Webhook": {
+      "main": [
+        [
+          {
+            "node": "Transform Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transform Data": {
+      "main": [
+        [
+          {
+            "node": "Calculate Statistics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculate Statistics": {
+      "main": [
+        [
+          {
+            "node": "Send Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1",
+  "meta": {
+    "instanceId": "n8n-practice"
+  },
+  "tags": []
+}

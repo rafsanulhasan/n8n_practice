@@ -1,0 +1,168 @@
+{
+  "name": "User Registration Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "user-registration",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-node-2",
+      "name": "Registration Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ],
+      "webhookId": "user-registration"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Validate user registration data\nconst userData = $input.item.json;\n\n// Validation rules\nconst errors = [];\nconst emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n\nif (!userData.email || !emailRegex.test(userData.email)) {\n  errors.push('Invalid email address');\n}\n\nif (!userData.username || userData.username.length < 3) {\n  errors.push('Username must be at least 3 characters');\n}\n\nif (!userData.password || userData.password.length < 8) {\n  errors.push('Password must be at least 8 characters');\n}\n\nif (errors.length > 0) {\n  return {\n    valid: false,\n    errors: errors\n  };\n}\n\n// If valid, prepare user data\nreturn {\n  valid: true,\n  user: {\n    id: Date.now().toString(),\n    email: userData.email,\n    username: userData.username,\n    createdAt: new Date().toISOString(),\n    status: 'active'\n  }\n};"
+      },
+      "id": "code-node-2",
+      "name": "Validate User Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.valid }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "if-node-1",
+      "name": "Is Valid?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Send success response\nconst user = $input.item.json.user;\n\nreturn {\n  success: true,\n  message: 'User registered successfully',\n  user: user\n};"
+      },
+      "id": "code-node-3",
+      "name": "Success Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        850,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Send error response\nconst errors = $input.item.json.errors;\n\nreturn {\n  success: false,\n  message: 'Validation failed',\n  errors: errors\n};"
+      },
+      "id": "code-node-4",
+      "name": "Error Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        850,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}"
+      },
+      "id": "respond-node-2",
+      "name": "Send Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Registration Webhook": {
+      "main": [
+        [
+          {
+            "node": "Validate User Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate User Data": {
+      "main": [
+        [
+          {
+            "node": "Is Valid?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Valid?": {
+      "main": [
+        [
+          {
+            "node": "Success Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Error Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Success Response": {
+      "main": [
+        [
+          {
+            "node": "Send Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Error Response": {
+      "main": [
+        [
+          {
+            "node": "Send Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1",
+  "meta": {
+    "instanceId": "n8n-practice"
+  },
+  "tags": []
+}

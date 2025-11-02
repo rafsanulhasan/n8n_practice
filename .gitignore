@@ -18,6 +18,127 @@ node_modules/
 .scannerwork/
 sonar-project.properties
 
+# Test Coverage
+coverage/
+*.coverage
+*.coveragexml
+TestResults/
+
+# Mutation Testing (Stryker.NET)
+StrykerOutput/
+**/StrykerOutput/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.tmp
+*.swp
+*~
+.DS_Store
+
+# Blazor specific
+*.dll
+*.pdb
+
+# Blazor wwwroot - keep custom files but exclude generated/lib files
+n8n-blazor-frontend/N8nWebhookClient/bin/
+n8n-blazor-frontend/N8nWebhookClient/obj/
+
+# Visual Studio
+.vs/
+.vscode/
+*.sln.DotSettings.user
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+*.nuget.props
+*.nuget.targets
+
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Node.js (if used for tooling)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# n8n local data
+.n8n/
+
+# IDE
+*.swp
+*.swo
+*.swn
+.idea/
+*.iml
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+tmp/
+temp/
+# Volumes
+volumes/
+!volumes/sonarqube/
+!volumes/sonarqube/**
+
+# IDE folders
+.vscode/
+.vs/
+
+# Node modules
+node_modules/
+
+# SonarQube
+.scannerwork/
+
+# Logs
+*.log
+
 # OS
 .DS_Store
 Thumbs.db
