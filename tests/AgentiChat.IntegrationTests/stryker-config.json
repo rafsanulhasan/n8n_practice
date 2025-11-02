@@ -1,0 +1,30 @@
+{
+    "stryker-config": {
+        "project": "../../samples/AgenticChat/AgenticChat.csproj",
+        "solution": "../../n8n.sln",
+        "test-projects": [
+            "AgenticChat.IntegrationTests.csproj"
+        ],
+        "reporters": [
+            "html",
+            "progress",
+            "cleartext",
+            "json"
+        ],
+        "thresholds": {
+            "high": 80,
+            "low": 60,
+            "break": 50
+        },
+        "mutation-level": "standard",
+        "concurrency": 4,
+        "ignore-methods": [
+            "*ToString*",
+            "*GetHashCode*",
+            "*Equals*"
+        ],
+        "ignore-mutations": [
+            "String"
+        ]
+    }
+}

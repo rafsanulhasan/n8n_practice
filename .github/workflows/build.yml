@@ -44,7 +44,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: bash
         run: |
-          ${{ runner.temp }}/scanner/dotnet-sonarscanner begin /k:"rafsanulhasan_n8n_practice" /o:"rafsanulhasan" /d:sonar.token="$SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/coverage/**/coverage.opencover.xml" /d:sonar.coverage.exclusions="**/N8nWebhookClient/**,**/N8nWebhookClient.UnitTests/**,**/N8nWebhookClient.IntegrationTests/**,**/Program.cs,**/N8nModels.cs,**/*.razor" /d:sonar.exclusions="**/obj/**,**/bin/**,**/StrykerOutput/**,**/coverage/**" /d:sonar.tests="n8n-blazor-frontend/N8nWebhookClient.UnitTests,n8n-blazor-frontend/N8nWebhookClient.IntegrationTests" /d:sonar.test.inclusions="**/*Tests.cs"
+          ${{ runner.temp }}/scanner/dotnet-sonarscanner begin /k:"rafsanulhasan_n8n_practice" /o:"rafsanulhasan" /d:sonar.token="$SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/coverage/**/coverage.opencover.xml" /d:sonar.coverage.exclusions="**/N8NWebhookClient/**,**/N8NWebhookClient.UnitTests/**,**/N8NWebhookClient.IntegrationTests/**,**/Program.cs,**/N8NModels.cs,**/*.razor" /d:sonar.exclusions="**/obj/**,**/bin/**,**/StrykerOutput/**,**/coverage/**" /d:sonar.tests="n8n-blazor-frontend/N8NWebhookClient.UnitTests,n8n-blazor-frontend/N8NWebhookClient.IntegrationTests" /d:sonar.test.inclusions="**/*Tests.cs"
           dotnet build
           dotnet test --no-build --collect:"XPlat Code Coverage" --results-directory ./coverage -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
           ${{ runner.temp }}/scanner/dotnet-sonarscanner end /d:sonar.token="$SONAR_TOKEN"
@@ -56,14 +56,14 @@ jobs:
       - name: Run Mutation Tests (Unit Tests)
         shell: bash
         run: |
-          cd n8n-blazor-frontend/N8nWebhookClient.UnitTests
+          cd n8n-blazor-frontend/N8NWebhookClient.UnitTests
           dotnet stryker --reporter html --reporter json --reporter cleartext
         continue-on-error: true
 
       - name: Run Mutation Tests (Integration Tests)
         shell: bash
         run: |
-          cd n8n-blazor-frontend/N8nWebhookClient.IntegrationTests
+          cd n8n-blazor-frontend/N8NWebhookClient.IntegrationTests
           dotnet stryker --reporter html --reporter json --reporter cleartext
         continue-on-error: true
 
@@ -73,8 +73,8 @@ jobs:
         with:
           name: mutation-test-reports
           path: |
-            n8n-blazor-frontend/N8nWebhookClient.UnitTests/StrykerOutput/**/mutation-report.html
-            n8n-blazor-frontend/N8nWebhookClient.IntegrationTests/StrykerOutput/**/mutation-report.html
-            n8n-blazor-frontend/N8nWebhookClient.UnitTests/StrykerOutput/**/mutation-report.json
-            n8n-blazor-frontend/N8nWebhookClient.IntegrationTests/StrykerOutput/**/mutation-report.json
+            n8n-blazor-frontend/N8NWebhookClient.UnitTests/StrykerOutput/**/mutation-report.html
+            n8n-blazor-frontend/N8NWebhookClient.IntegrationTests/StrykerOutput/**/mutation-report.html
+            n8n-blazor-frontend/N8NWebhookClient.UnitTests/StrykerOutput/**/mutation-report.json
+            n8n-blazor-frontend/N8NWebhookClient.IntegrationTests/StrykerOutput/**/mutation-report.json
           retention-days: 30

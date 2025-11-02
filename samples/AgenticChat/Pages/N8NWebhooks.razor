@@ -1,0 +1,234 @@
+@page "/n8n-webhooks"
+@using N8N.Connector.Models
+@inject N8NWebhookService WebhookService
+
+<PageTitle>n8n Webhook Triggers</PageTitle>
+
+<h1>n8n Webhook Triggers</h1>
+
+<p>This page demonstrates how to trigger n8n workflows using webhooks from a Blazor frontend.</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5>Simple Webhook</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">n8n Webhook URL:</label>
+                    <input type="text" class="form-control" @bind="simpleWebhookUrl" placeholder="http://localhost:5678/webhook/simple-webhook" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Message:</label>
+                    <input type="text" class="form-control" @bind="simpleMessage" placeholder="Enter a message" />
+                </div>
+                <button class="btn btn-primary" @onclick="TriggerSimpleWebhook" disabled="@isSimpleLoading">
+                    @if (isSimpleLoading)
+                    {
+                        <span class="spinner-border spinner-border-sm me-2"></span>
+                    }
+                    Trigger Webhook
+                </button>
+                @if (!string.IsNullOrEmpty(simpleResponse))
+                {
+                    <div class="alert alert-info mt-3">
+                        <strong>Response:</strong>
+                        <pre>@simpleResponse</pre>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5>User Registration</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">n8n Webhook URL:</label>
+                    <input type="text" class="form-control" @bind="registrationWebhookUrl" placeholder="http://localhost:5678/webhook/user-registration" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email:</label>
+                    <input type="email" class="form-control" @bind="userEmail" placeholder="user@example.com" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Username:</label>
+                    <input type="text" class="form-control" @bind="username" placeholder="johndoe" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password:</label>
+                    <input type="password" class="form-control" @bind="password" placeholder="********" />
+                </div>
+                <button class="btn btn-primary" @onclick="TriggerUserRegistration" disabled="@isRegistrationLoading">
+                    @if (isRegistrationLoading)
+                    {
+                        <span class="spinner-border spinner-border-sm me-2"></span>
+                    }
+                    Register User
+                </button>
+                @if (!string.IsNullOrEmpty(registrationResponse))
+                {
+                    <div class="alert alert-info mt-3">
+                        <strong>Response:</strong>
+                        <pre>@registrationResponse</pre>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5>Data Processing</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">n8n Webhook URL:</label>
+                    <input type="text" class="form-control" @bind="dataProcessingUrl" placeholder="http://localhost:5678/webhook/process-data" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Sample Data:</label>
+                    <textarea class="form-control" rows="5" readonly>
+[
+  {"name": "Item1", "value": "100"},
+  {"name": "Item2", "value": "200"}
+]
+                    </textarea>
+                </div>
+                <button class="btn btn-primary" @onclick="TriggerDataProcessing" disabled="@isDataProcessingLoading">
+                    @if (isDataProcessingLoading)
+                    {
+                        <span class="spinner-border spinner-border-sm me-2"></span>
+                    }
+                    Process Data
+                </button>
+                @if (!string.IsNullOrEmpty(dataProcessingResponse))
+                {
+                    <div class="alert alert-info mt-3">
+                        <strong>Response:</strong>
+                        <pre>@dataProcessingResponse</pre>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string simpleWebhookUrl = "http://localhost:5678/webhook/simple-webhook";
+    private string simpleMessage = "Hello from Blazor!";
+    private string simpleResponse = string.Empty;
+    private bool isSimpleLoading = false;
+
+    private string registrationWebhookUrl = "http://localhost:5678/webhook/user-registration";
+    private string userEmail = "test@example.com";
+    private string username = "testuser";
+    private string password = "password123";
+    private string registrationResponse = string.Empty;
+    private bool isRegistrationLoading = false;
+
+    private string dataProcessingUrl = "http://localhost:5678/webhook/process-data";
+    private string dataProcessingResponse = string.Empty;
+    private bool isDataProcessingLoading = false;
+
+    private async Task TriggerSimpleWebhook()
+    {
+        isSimpleLoading = true;
+        simpleResponse = string.Empty;
+
+        try
+        {
+            var request = new SimpleWebhookRequest
+            {
+                Message = simpleMessage,
+                Data = new Dictionary<string, object>
+                {
+                    { "timestamp", DateTime.UtcNow.ToString("o") },
+                    { "source", "Blazor Frontend" }
+                }
+            };
+
+            var response = await WebhookService.TriggerWebhookAsync<SimpleWebhookResponse>(simpleWebhookUrl, request);
+            
+            simpleResponse = response.Success
+                ? System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true })
+                : string.Format("Error: {0}\n\nRaw Response:\n{1}", response.ErrorMessage, response.RawResponse);
+        }
+        catch (Exception ex)
+        {
+            simpleResponse = string.Format("Exception: {0}", ex.Message);
+        }
+        finally
+        {
+            isSimpleLoading = false;
+        }
+    }
+
+    private async Task TriggerUserRegistration()
+    {
+        isRegistrationLoading = true;
+        registrationResponse = string.Empty;
+
+        try
+        {
+            var request = new UserRegistrationRequest
+            {
+                Email = userEmail,
+                Username = username,
+                Password = password
+            };
+
+            var response = await WebhookService.TriggerWebhookAsync<UserRegistrationResponse>(registrationWebhookUrl, request);
+            
+            registrationResponse = response.Success
+                ? System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true })
+                : string.Format("Error: {0}\n\nRaw Response:\n{1}", response.ErrorMessage, response.RawResponse);
+        }
+        catch (Exception ex)
+        {
+            registrationResponse = string.Format("Exception: {0}", ex.Message);
+        }
+        finally
+        {
+            isRegistrationLoading = false;
+        }
+    }
+
+    private async Task TriggerDataProcessing()
+    {
+        isDataProcessingLoading = true;
+        dataProcessingResponse = string.Empty;
+
+        try
+        {
+            var request = new DataProcessingRequest
+            {
+                Items = new List<DataItem>
+                {
+                    new DataItem { Name = "Item1", Value = "100" },
+                    new DataItem { Name = "Item2", Value = "200" },
+                    new DataItem { Name = "Item3", Value = "300" }
+                }
+            };
+
+            var response = await WebhookService.TriggerWebhookAsync<DataProcessingResponse>(dataProcessingUrl, request);
+            
+            dataProcessingResponse = response.Success
+                ? System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true })
+                : string.Format("Error: {0}\n\nRaw Response:\n{1}", response.ErrorMessage, response.RawResponse);
+        }
+        catch (Exception ex)
+        {
+            dataProcessingResponse = string.Format("Exception: {0}", ex.Message);
+        }
+        finally
+        {
+            isDataProcessingLoading = false;
+        }
+    }
+}
