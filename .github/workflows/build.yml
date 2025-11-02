@@ -44,7 +44,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: bash
         run: |
-          ${{ runner.temp }}/scanner/dotnet-sonarscanner begin /k:"rafsanulhasan_n8n_practice" /o:"rafsanulhasan" /d:sonar.token="$SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
+          ${{ runner.temp }}/scanner/dotnet-sonarscanner begin /k:"rafsanulhasan_n8n_practice" /o:"rafsanulhasan" /d:sonar.token="$SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/coverage/**/coverage.opencover.xml" /d:sonar.coverage.exclusions="**/N8nWebhookClient/**,**/N8nWebhookClient.UnitTests/**,**/N8nWebhookClient.IntegrationTests/**,**/Program.cs,**/N8nModels.cs,**/*.razor" /d:sonar.exclusions="**/obj/**,**/bin/**,**/StrykerOutput/**,**/coverage/**" /d:sonar.tests="n8n-blazor-frontend/N8nWebhookClient.UnitTests,n8n-blazor-frontend/N8nWebhookClient.IntegrationTests" /d:sonar.test.inclusions="**/*Tests.cs"
           dotnet build
           dotnet test --no-build --collect:"XPlat Code Coverage" --results-directory ./coverage -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
           ${{ runner.temp }}/scanner/dotnet-sonarscanner end /d:sonar.token="$SONAR_TOKEN"
