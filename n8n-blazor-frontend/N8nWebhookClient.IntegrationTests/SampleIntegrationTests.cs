@@ -12,10 +12,9 @@ namespace N8nWebhookClient.IntegrationTests;
 public class SampleIntegrationTests
 {
     private Faker _faker = null!;
-    private IContainer? _testContainer;
 
     [OneTimeSetUp]
-    public async Task OneTimeSetup()
+    public Task OneTimeSetup()
     {
         // Initialize Faker for generating test data
         _faker = new Faker();
@@ -31,16 +30,20 @@ public class SampleIntegrationTests
         
         await _testContainer.StartAsync();
         */
+
+        return Task.CompletedTask;
     }
 
     [OneTimeTearDown]
-    public async Task OneTimeTearDown()
+    public Task OneTimeTearDown()
     {
         // Clean up containers after all tests
-        if (_testContainer != null)
-        {
-            await _testContainer.DisposeAsync();
-        }
+        // if (_testContainer != null)
+        // {
+        //     await _testContainer.DisposeAsync();
+        // }
+
+        return Task.CompletedTask;
     }
 
     [SetUp]

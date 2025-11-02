@@ -1,7 +1,7 @@
 @page "/n8n-webhooks"
 @using N8nWebhookClient.Services
 @using N8nWebhookClient.Models
-@inject N8nWebhookService WebhookService
+@inject N8NWebhookService WebhookService
 
 <PageTitle>n8n Webhook Triggers</PageTitle>
 
@@ -158,16 +158,11 @@
             
             simpleResponse = response.Success
                 ? System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true })
-                : $"Error: {response.ErrorMessage}\n\nRaw Response:\n{response.RawResponse}";
+                : string.Format("Error: {0}\n\nRaw Response:\n{1}", response.ErrorMessage, response.RawResponse);
         }
-        catch (Exception ex) when (
-            !(ex is System.StackOverflowException) &&
-            !(ex is System.OutOfMemoryException) &&
-            !(ex is System.Threading.ThreadAbortException) &&
-            !(ex is System.AccessViolationException)
-        )
+        catch (Exception ex)
         {
-            simpleResponse = $"Exception: {ex.Message}";
+            simpleResponse = string.Format("Exception: {0}", ex.Message);
         }
         finally
         {
@@ -193,16 +188,11 @@
             
             registrationResponse = response.Success
                 ? System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true })
-                : $"Error: {response.ErrorMessage}\n\nRaw Response:\n{response.RawResponse}";
+                : string.Format("Error: {0}\n\nRaw Response:\n{1}", response.ErrorMessage, response.RawResponse);
         }
-        catch (Exception ex) when (
-            !(ex is System.StackOverflowException) &&
-            !(ex is System.OutOfMemoryException) &&
-            !(ex is System.Threading.ThreadAbortException) &&
-            !(ex is System.AccessViolationException)
-        )
+        catch (Exception ex)
         {
-            registrationResponse = $"Exception: {ex.Message}";
+            registrationResponse = string.Format("Exception: {0}", ex.Message);
         }
         finally
         {
@@ -231,16 +221,11 @@
             
             dataProcessingResponse = response.Success
                 ? System.Text.Json.JsonSerializer.Serialize(response.Data, new System.Text.Json.JsonSerializerOptions { WriteIndented = true })
-                : $"Error: {response.ErrorMessage}\n\nRaw Response:\n{response.RawResponse}";
+                : string.Format("Error: {0}\n\nRaw Response:\n{1}", response.ErrorMessage, response.RawResponse);
         }
-        catch (Exception ex) when (
-            !(ex is System.StackOverflowException) &&
-            !(ex is System.OutOfMemoryException) &&
-            !(ex is System.Threading.ThreadAbortException) &&
-            !(ex is System.AccessViolationException)
-        )
+        catch (Exception ex)
         {
-            dataProcessingResponse = $"Exception: {ex.Message}";
+            dataProcessingResponse = string.Format("Exception: {0}", ex.Message);
         }
         finally
         {

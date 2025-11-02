@@ -6,12 +6,12 @@ using N8nWebhookClient.Core.Services;
 
 namespace N8nWebhookClient.Services
 {
-    public class N8nWebhookService : IN8nWebhookService
+    public class N8NWebhookService : IN8NWebhookService
     {
         private readonly HttpClient _httpClient;
-        private readonly ILogger<N8nWebhookService> _logger;
+        private readonly ILogger<N8NWebhookService> _logger;
 
-        public N8nWebhookService(HttpClient httpClient, ILogger<N8nWebhookService> logger)
+        public N8NWebhookService(HttpClient httpClient, ILogger<N8NWebhookService> logger)
         {
             _httpClient = httpClient;
             _logger = logger;
@@ -24,7 +24,7 @@ namespace N8nWebhookClient.Services
                 var json = JsonSerializer.Serialize(payload);
                 using var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                _logger.LogInformation($"Sending webhook request to: {webhookUrl}");
+                _logger.LogInformation("Sending webhook request to: {WebhookUrl}", webhookUrl);
 
                 var response = await _httpClient.PostAsync(webhookUrl, content);
                 var responseContent = await response.Content.ReadAsStringAsync();
@@ -46,11 +46,11 @@ namespace N8nWebhookClient.Services
                 }
                 else
                 {
-                    _logger.LogError($"Webhook request failed with status code: {response.StatusCode}");
+                    _logger.LogError("Webhook request failed with status code: {StatusCode}", response.StatusCode);
                     return new WebhookResponse<T>
                     {
                         Success = false,
-                        ErrorMessage = $"Request failed with status code: {response.StatusCode}",
+                        ErrorMessage = string.Format("Request failed with status code: {0}", response.StatusCode),
                         StatusCode = (int)response.StatusCode,
                         RawResponse = responseContent
                     };

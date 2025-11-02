@@ -12,27 +12,27 @@ namespace N8nWebhookClient.UnitTests.Services;
 [TestFixture]
 public class N8nWebhookServiceTests
 {
-    private N8nWebhookService _sut = null!;
+    private N8NWebhookService _sut = null!;
     private HttpClient _httpClient = null!;
-    private TestHttpMessageHandler _httpMessageHandler = null!;
-    private ILogger<N8nWebhookService> _logger = null!;
+    private TestHttpMessageHandler _mockHandler = null!;
+    private ILogger<N8NWebhookService> _logger = null!;
     private Faker _faker = null!;
 
     [SetUp]
     public void Setup()
     {
         _faker = new Faker();
-        _logger = Substitute.For<ILogger<N8nWebhookService>>();
-        _httpMessageHandler = new TestHttpMessageHandler();
-        _httpClient = new HttpClient(_httpMessageHandler);
-        _sut = new N8nWebhookService(_httpClient, _logger);
+        _logger = Substitute.For<ILogger<N8NWebhookService>>();
+        _mockHandler = new TestHttpMessageHandler();
+        _httpClient = new HttpClient(_mockHandler);
+        _sut = new N8NWebhookService(_httpClient, _logger);
     }
 
     [TearDown]
     public void TearDown()
     {
         _httpClient?.Dispose();
-        _httpMessageHandler?.Dispose();
+        _mockHandler?.Dispose();
     }
 
     [Test]
@@ -47,7 +47,7 @@ public class N8nWebhookServiceTests
             Message = _faker.Lorem.Sentence()
         };
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(JsonSerializer.Serialize(expectedResponse))
         };
@@ -74,7 +74,7 @@ public class N8nWebhookServiceTests
         var payload = new { message = _faker.Lorem.Sentence() };
         var errorMessage = _faker.Lorem.Sentence();
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.BadRequest)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.BadRequest)
         {
             Content = new StringContent(errorMessage)
         };
@@ -106,7 +106,7 @@ public class N8nWebhookServiceTests
         var webhookUrl = _faker.Internet.Url();
         var payload = new { message = _faker.Lorem.Sentence() };
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(statusCode)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(statusCode)
         {
             Content = new StringContent("Error")
         };
@@ -128,7 +128,7 @@ public class N8nWebhookServiceTests
         var payload = new { message = _faker.Lorem.Sentence() };
         var exceptionMessage = _faker.Lorem.Sentence();
 
-        _httpMessageHandler.ExceptionToThrow = new HttpRequestException(exceptionMessage);
+        _mockHandler.ExceptionToThrow = new HttpRequestException(exceptionMessage);
 
         // Act
         var result = await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
@@ -149,7 +149,7 @@ public class N8nWebhookServiceTests
         var payload = new { message = _faker.Lorem.Sentence() };
         var invalidJson = "{ invalid json content";
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(invalidJson)
         };
@@ -178,7 +178,7 @@ public class N8nWebhookServiceTests
             Tags = new List<string> { _faker.Lorem.Word(), _faker.Lorem.Word() }
         };
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(JsonSerializer.Serialize(new TestResponseModel()))
         };
@@ -187,7 +187,7 @@ public class N8nWebhookServiceTests
         await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
 
         // Assert
-        var content = _httpMessageHandler.CapturedRequestContent;
+        var content = _mockHandler.CapturedRequestContent;
         content.ShouldNotBeNull();
         content!.ShouldContain(payload.Name);
         content.ShouldContain(payload.Email);
@@ -200,7 +200,7 @@ public class N8nWebhookServiceTests
         var webhookUrl = _faker.Internet.Url();
         var payload = new { message = _faker.Lorem.Sentence() };
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(JsonSerializer.Serialize(new TestResponseModel()))
         };
@@ -209,7 +209,7 @@ public class N8nWebhookServiceTests
         await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
 
         // Assert
-        var capturedRequest = _httpMessageHandler.LastRequest;
+        var capturedRequest = _mockHandler.LastRequest;
         capturedRequest.ShouldNotBeNull();
         capturedRequest!.Content!.Headers.ContentType!.MediaType.ShouldBe("application/json");
         capturedRequest.Content.Headers.ContentType.CharSet.ShouldBe("utf-8");
@@ -223,7 +223,7 @@ public class N8nWebhookServiceTests
         var payload = new { message = _faker.Lorem.Sentence() };
         var jsonWithDifferentCase = @"{""iD"":""123"",""MESSAGE"":""test""}";
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(jsonWithDifferentCase)
         };
@@ -251,7 +251,7 @@ public class N8nWebhookServiceTests
         };
         var rawResponse = JsonSerializer.Serialize(responseData);
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(rawResponse)
         };
@@ -271,7 +271,7 @@ public class N8nWebhookServiceTests
         var payload = new { message = _faker.Lorem.Sentence() };
         var errorResponse = "Error occurred";
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.BadRequest)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.BadRequest)
         {
             Content = new StringContent(errorResponse)
         };
@@ -290,7 +290,7 @@ public class N8nWebhookServiceTests
         var webhookUrl = _faker.Internet.Url();
         var payload = new { message = _faker.Lorem.Sentence() };
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(JsonSerializer.Serialize(new TestResponseModel()))
         };
@@ -299,7 +299,7 @@ public class N8nWebhookServiceTests
         await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
 
         // Assert
-        var capturedRequest = _httpMessageHandler.LastRequest;
+        var capturedRequest = _mockHandler.LastRequest;
         capturedRequest.ShouldNotBeNull();
         capturedRequest!.Method.ShouldBe(HttpMethod.Post);
     }
@@ -311,7 +311,7 @@ public class N8nWebhookServiceTests
         var webhookUrl = _faker.Internet.Url();
         var payload = new { message = _faker.Lorem.Sentence() };
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(JsonSerializer.Serialize(new TestResponseModel()))
         };
@@ -320,7 +320,7 @@ public class N8nWebhookServiceTests
         await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
 
         // Assert
-        var capturedRequest = _httpMessageHandler.LastRequest;
+        var capturedRequest = _mockHandler.LastRequest;
         capturedRequest.ShouldNotBeNull();
         // HttpClient may add trailing slash, use StartsWith or TrimEnd
         capturedRequest!.RequestUri!.ToString().TrimEnd('/').ShouldBe(webhookUrl.TrimEnd('/'));
@@ -333,7 +333,7 @@ public class N8nWebhookServiceTests
         var webhookUrl = _faker.Internet.Url();
         var payload = new { message = _faker.Lorem.Sentence() };
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(JsonSerializer.Serialize(new TestResponseModel()))
         };
@@ -357,7 +357,7 @@ public class N8nWebhookServiceTests
         var webhookUrl = _faker.Internet.Url();
         var payload = new { message = _faker.Lorem.Sentence() };
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.BadRequest)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.BadRequest)
         {
             Content = new StringContent("Error")
         };
@@ -382,7 +382,7 @@ public class N8nWebhookServiceTests
         var payload = new { message = _faker.Lorem.Sentence() };
         var exception = new HttpRequestException("Network error");
 
-        _httpMessageHandler.ExceptionToThrow = exception;
+        _mockHandler.ExceptionToThrow = exception;
 
         // Act
         await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
@@ -403,7 +403,7 @@ public class N8nWebhookServiceTests
         var webhookUrl = _faker.Internet.Url();
         var payload = new { message = _faker.Lorem.Sentence() };
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent("invalid json {{{")
         };
@@ -427,7 +427,7 @@ public class N8nWebhookServiceTests
         var webhookUrl = _faker.Internet.Url();
         var payload = new { message = _faker.Lorem.Sentence() };
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.InternalServerError)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.InternalServerError)
         {
             Content = new StringContent("Server error")
         };
@@ -448,7 +448,7 @@ public class N8nWebhookServiceTests
         var exceptionMessage = "Connection refused";
         var exception = new HttpRequestException(exceptionMessage);
 
-        _httpMessageHandler.ExceptionToThrow = exception;
+        _mockHandler.ExceptionToThrow = exception;
 
         // Act
         var result = await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
@@ -464,7 +464,7 @@ public class N8nWebhookServiceTests
         var webhookUrl = _faker.Internet.Url();
         var payload = new { message = _faker.Lorem.Sentence() };
 
-        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        _mockHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent("invalid json {{{")
         };

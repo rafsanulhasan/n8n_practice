@@ -14,7 +14,7 @@ namespace N8nWebhookClient.UnitTests.Pages;
 public class N8nWebhooksTests
 {
     private BunitTestContext _testContext = null!;
-    private N8nWebhookService _mockWebhookService = null!;
+    private N8NWebhookService _mockWebhookService = null!;
 
     [SetUp]
     public void Setup()
@@ -23,8 +23,8 @@ public class N8nWebhooksTests
 
         // Create a mock service with substituted dependencies
         var mockHttpClient = new HttpClient();
-        var mockLogger = Substitute.For<ILogger<N8nWebhookService>>();
-        _mockWebhookService = Substitute.ForPartsOf<N8nWebhookService>(mockHttpClient, mockLogger);
+        var mockLogger = Substitute.For<ILogger<N8NWebhookService>>();
+        _mockWebhookService = Substitute.ForPartsOf<N8NWebhookService>(mockHttpClient, mockLogger);
 
         _testContext.Services.AddSingleton(_mockWebhookService);
     }
