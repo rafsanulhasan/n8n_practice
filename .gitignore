@@ -18,6 +18,12 @@ node_modules/
 .scannerwork/
 sonar-project.properties
 
+# Test Coverage
+coverage/
+*.coverage
+*.coveragexml
+TestResults/
+
 # OS
 .DS_Store
 Thumbs.db
