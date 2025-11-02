@@ -1,6 +1,6 @@
 # N8n Webhook Client - Test Projects
 
-This solution includes comprehensive testing infrastructure with unit tests and integration tests to ensure high code quality and coverage.
+This solution includes comprehensive testing infrastructure with unit tests, integration tests, code coverage, and **mutation testing** to ensure high code quality.
 
 ## Test Projects
 
@@ -25,6 +25,9 @@ Integration tests for testing the application with real or containerized depende
 - **Bogus** - Fake data generation
 - **Shouldly** - Assertion library
 
+### 3. Mutation Testing
+**Stryker.NET** - Mutation testing framework to verify test effectiveness
+
 ## Running Tests
 
 ### Run All Tests
@@ -45,6 +48,16 @@ dotnet test n8n-blazor-frontend/N8nWebhookClient.IntegrationTests
 ### Run Tests with Code Coverage
 ```powershell
 dotnet test --collect:"XPlat Code Coverage"
+```
+
+### Run Mutation Tests
+```powershell
+# Run all mutation tests
+.\run-mutation-tests.ps1
+
+# Or run for specific project
+cd n8n-blazor-frontend/N8nWebhookClient.UnitTests
+dotnet stryker
 ```
 
 ### Run Tests with Code Coverage in OpenCover Format (for SonarQube)
@@ -229,6 +242,39 @@ The GitHub Actions workflow automatically:
 - Use correct command with coverage collection flag
 - Check that tests are actually running
 
+## Mutation Testing
+
+Mutation testing evaluates the **quality** of your tests by introducing small code changes (mutations) and checking if tests catch them.
+
+### What Gets Measured
+- **Mutation Score**: % of mutations killed by tests
+- **Test Effectiveness**: How well tests detect bugs
+- **Test Quality**: Beyond simple code coverage
+
+### Running Mutation Tests
+```powershell
+# All projects
+.\run-mutation-tests.ps1
+
+# Specific project
+cd n8n-blazor-frontend/N8nWebhookClient.UnitTests
+dotnet stryker
+```
+
+### Understanding Results
+- **80-100%**: Excellent test quality ✅
+- **60-79%**: Good test quality 👍
+- **40-59%**: Acceptable, needs improvement ⚠️
+- **<40%**: Poor test quality, critical gaps ❌
+
+### View Reports
+After running Stryker, open the HTML report:
+```
+n8n-blazor-frontend/N8nWebhookClient.UnitTests/StrykerOutput/[timestamp]/reports/mutation-report.html
+```
+
+For detailed information, see [MUTATION_TESTING.md](../MUTATION_TESTING.md)
+
 ## Resources
 
 - [NUnit Documentation](https://docs.nunit.org/)
@@ -237,3 +283,4 @@ The GitHub Actions workflow automatically:
 - [Bogus Documentation](https://github.com/bchavez/Bogus)
 - [Shouldly Documentation](https://docs.shouldly.org/)
 - [Testcontainers Documentation](https://dotnet.testcontainers.org/)
+- [Stryker.NET Documentation](https://stryker-mutator.io/docs/stryker-net/introduction/)

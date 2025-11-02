@@ -48,3 +48,33 @@ jobs:
           dotnet build
           dotnet test --no-build --collect:"XPlat Code Coverage" --results-directory ./coverage -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
           ${{ runner.temp }}/scanner/dotnet-sonarscanner end /d:sonar.token="$SONAR_TOKEN"
+
+      - name: Restore local tools
+        shell: bash
+        run: dotnet tool restore
+
+      - name: Run Mutation Tests (Unit Tests)
+        shell: bash
+        run: |
+          cd n8n-blazor-frontend/N8nWebhookClient.UnitTests
+          dotnet stryker --reporter html --reporter json --reporter cleartext
+        continue-on-error: true
+
+      - name: Run Mutation Tests (Integration Tests)
+        shell: bash
+        run: |
+          cd n8n-blazor-frontend/N8nWebhookClient.IntegrationTests
+          dotnet stryker --reporter html --reporter json --reporter cleartext
+        continue-on-error: true
+
+      - name: Upload Mutation Test Reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mutation-test-reports
+          path: |
+            n8n-blazor-frontend/N8nWebhookClient.UnitTests/StrykerOutput/**/mutation-report.html
+            n8n-blazor-frontend/N8nWebhookClient.IntegrationTests/StrykerOutput/**/mutation-report.html
+            n8n-blazor-frontend/N8nWebhookClient.UnitTests/StrykerOutput/**/mutation-report.json
+            n8n-blazor-frontend/N8nWebhookClient.IntegrationTests/StrykerOutput/**/mutation-report.json
+          retention-days: 30

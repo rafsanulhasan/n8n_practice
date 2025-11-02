@@ -24,6 +24,10 @@ coverage/
 *.coveragexml
 TestResults/
 
+# Mutation Testing (Stryker.NET)
+StrykerOutput/
+**/StrykerOutput/
+
 # OS
 .DS_Store
 Thumbs.db
