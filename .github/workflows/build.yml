@@ -62,21 +62,33 @@ jobs:
         continue-on-error: false
 
       - name: Check Mutation Score
-        shell: bash
+        shell: pwsh
         run: |
-          MUTATION_REPORT="tests/Connector.UnitTests/StrykerOutput/$(ls -t tests/Connector.UnitTests/StrykerOutput/ | head -n1)/reports/mutation-report.json"
-          if [ -f "$MUTATION_REPORT" ]; then
-            MUTATION_SCORE=$(jq -r '.files | to_entries | map(.value.mutationScore) | add / length' "$MUTATION_REPORT")
-            echo "Mutation Score: $MUTATION_SCORE%"
-            if (( $(echo "$MUTATION_SCORE < 80" | bc -l) )); then
-              echo "❌ Mutation score ($MUTATION_SCORE%) is below the required threshold of 80%"
-              exit 1
-            else
-              echo "✅ Mutation score ($MUTATION_SCORE%) meets the required threshold of 80%"
-            fi
-          else
-            echo "⚠️ Mutation report not found, skipping mutation score check"
-          fi
+          $latestReport = Get-ChildItem -Path "tests/Connector.UnitTests/StrykerOutput" -Directory | 
+                          Sort-Object LastWriteTime -Descending | 
+                          Select-Object -First 1
+
+          if ($latestReport) {
+            $reportPath = Join-Path $latestReport.FullName "reports/mutation-report.json"
+            
+            if (Test-Path $reportPath) {
+              $report = Get-Content $reportPath | ConvertFrom-Json
+              $mutationScore = $report.files.psobject.Properties.Value.mutationScore | Measure-Object -Average | Select-Object -ExpandProperty Average
+              
+              Write-Host "Mutation Score: $mutationScore%"
+              
+              if ($mutationScore -lt 80) {
+                Write-Host "❌ Mutation score ($mutationScore%) is below the required threshold of 80%"
+                exit 1
+              } else {
+                Write-Host "✅ Mutation score ($mutationScore%) meets the required threshold of 80%"
+              }
+            } else {
+              Write-Host "⚠️ Mutation report not found at: $reportPath"
+            }
+          } else {
+            Write-Host "⚠️ No StrykerOutput directory found, skipping mutation score check"
+          }
 
       - name: Upload Mutation Test Reports
         uses: actions/upload-artifact@v4
