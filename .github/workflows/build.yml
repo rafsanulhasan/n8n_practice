@@ -53,7 +53,11 @@ jobs:
         shell: bash
         run: dotnet tool restore
 
-      - name: Run Mutation Tests (Connector Unit Tests)
+      - name: Check Code Coverage Threshold
+        shell: pwsh
+        run: ./.github/scripts/check-code-coverage.ps1 -Threshold 80
+
+      - name: Run Mutation Tests
         shell: bash
         run: |
           cd tests/Connector.UnitTests
@@ -65,6 +69,25 @@ jobs:
         shell: pwsh
         run: ./.github/scripts/check-mutation-score.ps1 -Threshold 80
 
+      - name: Comment Quality Gate Report on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const commentQualityGate = require('./.github/scripts/comment-quality-gate.js');
+            await commentQualityGate({ github, context });
+
+      - name: Upload Coverage Reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-reports
+          path: |
+            coverage/**/coverage.opencover.xml
+            coverage/**/coverage.cobertura.xml
+            coverage/report/**
+          retention-days: 30
+
       - name: Upload Mutation Test Reports
         uses: actions/upload-artifact@v4
         if: always()
@@ -74,11 +97,3 @@ jobs:
             tests/Connector.UnitTests/StrykerOutput/**/mutation-report.html
             tests/Connector.UnitTests/StrykerOutput/**/mutation-report.json
           retention-days: 30
-
-      - name: Comment Mutation Score on PR
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const commentMutationScore = require('./.github/scripts/comment-mutation-score.js');
-            await commentMutationScore({ github, context });
