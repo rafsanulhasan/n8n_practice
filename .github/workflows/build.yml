@@ -44,6 +44,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: bash
         run: |
-          ${{ runner.temp }}/scanner/dotnet-sonarscanner begin /k:"rafsanulhasan_n8n_practice" /o:"rafsanulhasan" /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+          ${{ runner.temp }}/scanner/dotnet-sonarscanner begin /k:"rafsanulhasan_n8n_practice" /o:"rafsanulhasan" /d:sonar.token="$SONAR_TOKEN"
           dotnet build
-          ${{ runner.temp }}/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+          ${{ runner.temp }}/scanner/dotnet-sonarscanner end /d:sonar.token="$SONAR_TOKEN"
