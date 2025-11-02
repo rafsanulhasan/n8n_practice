@@ -2,10 +2,11 @@ using System.Text;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics.CodeAnalysis;
+using N8nWebhookClient.Core.Services;
 
 namespace N8nWebhookClient.Services
 {
-    public class N8nWebhookService
+    public class N8nWebhookService : IN8nWebhookService
     {
         private readonly HttpClient _httpClient;
         private readonly ILogger<N8nWebhookService> _logger;
