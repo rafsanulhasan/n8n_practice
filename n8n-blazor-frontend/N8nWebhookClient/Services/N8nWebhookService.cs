@@ -22,15 +22,15 @@ namespace N8nWebhookClient.Services
                 using var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 _logger.LogInformation($"Sending webhook request to: {webhookUrl}");
-                
+
                 var response = await _httpClient.PostAsync(webhookUrl, content);
                 var responseContent = await response.Content.ReadAsStringAsync();
 
                 if (response.IsSuccessStatusCode)
                 {
-                    var data = JsonSerializer.Deserialize<T>(responseContent, new JsonSerializerOptions 
-                    { 
-                        PropertyNameCaseInsensitive = true 
+                    var data = JsonSerializer.Deserialize<T>(responseContent, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
                     });
 
                     return new WebhookResponse<T>
