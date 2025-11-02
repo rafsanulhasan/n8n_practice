@@ -325,6 +325,157 @@ public class N8nWebhookServiceTests
         // HttpClient may add trailing slash, use StartsWith or TrimEnd
         capturedRequest!.RequestUri!.ToString().TrimEnd('/').ShouldBe(webhookUrl.TrimEnd('/'));
     }
+
+    [Test]
+    public async Task TriggerWebhookAsync_ShouldLogInformation_WhenSendingRequest()
+    {
+        // Arrange
+        var webhookUrl = _faker.Internet.Url();
+        var payload = new { message = _faker.Lorem.Sentence() };
+
+        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        {
+            Content = new StringContent(JsonSerializer.Serialize(new TestResponseModel()))
+        };
+
+        // Act
+        await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
+
+        // Assert
+        _logger.Received(1).Log(
+            LogLevel.Information,
+            Arg.Any<EventId>(),
+            Arg.Is<object>(o => o.ToString()!.Contains($"Sending webhook request to: {webhookUrl}")),
+            null,
+            Arg.Any<Func<object, Exception?, string>>());
+    }
+
+    [Test]
+    public async Task TriggerWebhookAsync_ShouldLogError_WhenRequestFails()
+    {
+        // Arrange
+        var webhookUrl = _faker.Internet.Url();
+        var payload = new { message = _faker.Lorem.Sentence() };
+
+        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.BadRequest)
+        {
+            Content = new StringContent("Error")
+        };
+
+        // Act
+        await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
+
+        // Assert
+        _logger.Received(1).Log(
+            LogLevel.Error,
+            Arg.Any<EventId>(),
+            Arg.Is<object>(o => o.ToString()!.Contains("Webhook request failed with status code: BadRequest")),
+            null,
+            Arg.Any<Func<object, Exception?, string>>());
+    }
+
+    [Test]
+    public async Task TriggerWebhookAsync_ShouldLogHttpRequestException_WithCorrectMessage()
+    {
+        // Arrange
+        var webhookUrl = _faker.Internet.Url();
+        var payload = new { message = _faker.Lorem.Sentence() };
+        var exception = new HttpRequestException("Network error");
+
+        _httpMessageHandler.ExceptionToThrow = exception;
+
+        // Act
+        await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
+
+        // Assert
+        _logger.Received(1).Log(
+            LogLevel.Error,
+            Arg.Any<EventId>(),
+            Arg.Is<object>(o => o.ToString()!.Contains("HTTP request error triggering webhook")),
+            exception,
+            Arg.Any<Func<object, Exception?, string>>());
+    }
+
+    [Test]
+    public async Task TriggerWebhookAsync_ShouldLogJsonException_WithCorrectMessage()
+    {
+        // Arrange
+        var webhookUrl = _faker.Internet.Url();
+        var payload = new { message = _faker.Lorem.Sentence() };
+
+        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        {
+            Content = new StringContent("invalid json {{{")
+        };
+
+        // Act
+        await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
+
+        // Assert
+        _logger.Received(1).Log(
+            LogLevel.Error,
+            Arg.Any<EventId>(),
+            Arg.Is<object>(o => o.ToString()!.Contains("JSON serialization/deserialization error triggering webhook")),
+            Arg.Any<JsonException>(),
+            Arg.Any<Func<object, Exception?, string>>());
+    }
+
+    [Test]
+    public async Task TriggerWebhookAsync_ShouldReturnExactErrorMessage_ForFailedRequest()
+    {
+        // Arrange
+        var webhookUrl = _faker.Internet.Url();
+        var payload = new { message = _faker.Lorem.Sentence() };
+
+        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.InternalServerError)
+        {
+            Content = new StringContent("Server error")
+        };
+
+        // Act
+        var result = await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
+
+        // Assert
+        result.ErrorMessage.ShouldBe("Request failed with status code: InternalServerError");
+    }
+
+    [Test]
+    public async Task TriggerWebhookAsync_ShouldReturnHttpExceptionMessage_WhenHttpRequestFails()
+    {
+        // Arrange
+        var webhookUrl = _faker.Internet.Url();
+        var payload = new { message = _faker.Lorem.Sentence() };
+        var exceptionMessage = "Connection refused";
+        var exception = new HttpRequestException(exceptionMessage);
+
+        _httpMessageHandler.ExceptionToThrow = exception;
+
+        // Act
+        var result = await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
+
+        // Assert
+        result.ErrorMessage.ShouldBe(exceptionMessage);
+    }
+
+    [Test]
+    public async Task TriggerWebhookAsync_ShouldReturnJsonExceptionMessage_WhenDeserializationFails()
+    {
+        // Arrange
+        var webhookUrl = _faker.Internet.Url();
+        var payload = new { message = _faker.Lorem.Sentence() };
+
+        _httpMessageHandler.ResponseToReturn = new HttpResponseMessage(HttpStatusCode.OK)
+        {
+            Content = new StringContent("invalid json {{{")
+        };
+
+        // Act
+        var result = await _sut.TriggerWebhookAsync<TestResponseModel>(webhookUrl, payload);
+
+        // Assert
+        result.ErrorMessage.ShouldNotBeNullOrEmpty();
+        result.ErrorMessage.ShouldContain("invalid");
+    }
 }
 
 // Test helper for HttpMessageHandler

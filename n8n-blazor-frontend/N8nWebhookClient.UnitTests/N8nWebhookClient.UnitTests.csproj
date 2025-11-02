@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\N8nWebhookClient.Core\N8nWebhookClient.Core.csproj" />
+    <ProjectReference Include="..\N8nWebhookClient\N8nWebhookClient.csproj" />
   </ItemGroup>
 
 </Project>
