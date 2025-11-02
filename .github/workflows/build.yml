@@ -63,32 +63,7 @@ jobs:
 
       - name: Check Mutation Score
         shell: pwsh
-        run: |
-          $latestReport = Get-ChildItem -Path "tests/Connector.UnitTests/StrykerOutput" -Directory | 
-                          Sort-Object LastWriteTime -Descending | 
-                          Select-Object -First 1
-
-          if ($latestReport) {
-            $reportPath = Join-Path $latestReport.FullName "reports/mutation-report.json"
-            
-            if (Test-Path $reportPath) {
-              $report = Get-Content $reportPath | ConvertFrom-Json
-              $mutationScore = $report.files.psobject.Properties.Value.mutationScore | Measure-Object -Average | Select-Object -ExpandProperty Average
-              
-              Write-Host "Mutation Score: $mutationScore%"
-              
-              if ($mutationScore -lt 80) {
-                Write-Host "❌ Mutation score ($mutationScore%) is below the required threshold of 80%"
-                exit 1
-              } else {
-                Write-Host "✅ Mutation score ($mutationScore%) meets the required threshold of 80%"
-              }
-            } else {
-              Write-Host "⚠️ Mutation report not found at: $reportPath"
-            }
-          } else {
-            Write-Host "⚠️ No StrykerOutput directory found, skipping mutation score check"
-          }
+        run: ./.github/scripts/check-mutation-score.ps1 -Threshold 80
 
       - name: Upload Mutation Test Reports
         uses: actions/upload-artifact@v4
@@ -105,49 +80,5 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require('fs');
-            const path = require('path');
-
-            try {
-              const strykerOutputDir = 'tests/Connector.UnitTests/StrykerOutput';
-              const dirs = fs.readdirSync(strykerOutputDir).sort().reverse();
-              const latestReport = path.join(strykerOutputDir, dirs[0], 'reports', 'mutation-report.json');
-              
-              if (fs.existsSync(latestReport)) {
-                const report = JSON.parse(fs.readFileSync(latestReport, 'utf8'));
-                const mutationScore = report.files 
-                  ? Object.values(report.files)
-                      .map(f => f.mutationScore || 0)
-                      .reduce((a, b) => a + b, 0) / Object.keys(report.files).length
-                  : 0;
-                
-                const status = mutationScore >= 80 ? '✅' : '❌';
-                const threshold = mutationScore >= 80 ? 'PASSED' : 'FAILED';
-                
-                const body = `## ${status} Mutation Testing Report
-                
-                **Mutation Score:** ${mutationScore.toFixed(2)}%
-                **Quality Gate:** ${threshold} (Threshold: 80%)
-                
-                | Metric | Value |
-                |--------|-------|
-                | Killed Mutants | ${report.killed || 0} |
-                | Survived Mutants | ${report.survived || 0} |
-                | Timeout Mutants | ${report.timeout || 0} |
-                | No Coverage | ${report.noCoverage || 0} |
-                
-                ${mutationScore < 80 ? '⚠️ **Action Required:** Mutation score is below 80%. Please improve test coverage before merging.' : '🎉 **Great job!** Mutation score exceeds the required threshold.'}
-                
-                [View Full Report](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
-                `;
-                
-                github.rest.issues.createComment({
-                  issue_number: context.issue.number,
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  body: body
-                });
-              }
-            } catch (error) {
-              console.log('Could not post mutation score comment:', error.message);
-            }
+            const commentMutationScore = require('./.github/scripts/comment-mutation-score.js');
+            await commentMutationScore({ github, context });
