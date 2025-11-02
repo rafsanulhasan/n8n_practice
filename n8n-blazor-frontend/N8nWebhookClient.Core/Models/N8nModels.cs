@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace N8nWebhookClient.Models
 {
+    [ExcludeFromCodeCoverage]
     public class UserRegistrationRequest
     {
         public string Email { get; set; } = string.Empty;
@@ -7,6 +10,7 @@ namespace N8nWebhookClient.Models
         public string Password { get; set; } = string.Empty;
     }
 
+    [ExcludeFromCodeCoverage]
     public class UserRegistrationResponse
     {
         public bool Success { get; set; }
@@ -15,6 +19,7 @@ namespace N8nWebhookClient.Models
         public List<string>? Errors { get; set; }
     }
 
+    [ExcludeFromCodeCoverage]
     public class User
     {
         public string Id { get; set; } = string.Empty;
@@ -24,12 +29,14 @@ namespace N8nWebhookClient.Models
         public string Status { get; set; } = string.Empty;
     }
 
+    [ExcludeFromCodeCoverage]
     public class SimpleWebhookRequest
     {
         public string Message { get; set; } = string.Empty;
         public Dictionary<string, object>? Data { get; set; }
     }
 
+    [ExcludeFromCodeCoverage]
     public class SimpleWebhookResponse
     {
         public bool Success { get; set; }
@@ -38,17 +45,20 @@ namespace N8nWebhookClient.Models
         public string ProcessedAt { get; set; } = string.Empty;
     }
 
+    [ExcludeFromCodeCoverage]
     public class DataProcessingRequest
     {
         public List<DataItem>? Items { get; set; }
     }
 
+    [ExcludeFromCodeCoverage]
     public class DataItem
     {
         public string Name { get; set; } = string.Empty;
         public string Value { get; set; } = string.Empty;
     }
 
+    [ExcludeFromCodeCoverage]
     public class DataProcessingResponse
     {
         public List<ProcessedDataItem>? Items { get; set; }
@@ -57,6 +67,7 @@ namespace N8nWebhookClient.Models
         public ProcessingStatistics? Statistics { get; set; }
     }
 
+    [ExcludeFromCodeCoverage]
     public class ProcessedDataItem
     {
         public string Name { get; set; } = string.Empty;
@@ -65,6 +76,7 @@ namespace N8nWebhookClient.Models
         public string Status { get; set; } = string.Empty;
     }
 
+    [ExcludeFromCodeCoverage]
     public class ProcessingStatistics
     {
         public int TotalItems { get; set; }

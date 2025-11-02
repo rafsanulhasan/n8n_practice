@@ -1,6 +1,6 @@
 {
     "stryker-config": {
-        "project": "../N8nWebhookClient/N8nWebhookClient.csproj",
+        "project": "../N8nWebhookClient.Core/N8nWebhookClient.Core.csproj",
         "solution": "../../n8n.sln",
         "test-projects": [
             "N8nWebhookClient.UnitTests.csproj"
@@ -24,7 +24,7 @@
             "*Equals*"
         ],
         "ignore-mutations": [
-            "StringLiteral"
+            "String"
         ]
     }
 }

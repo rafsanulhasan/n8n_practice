@@ -1,5 +1,7 @@
 using System.Text;
 using System.Text.Json;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics.CodeAnalysis;
 
 namespace N8nWebhookClient.Services
 {
@@ -74,6 +76,7 @@ namespace N8nWebhookClient.Services
         }
     }
 
+    [ExcludeFromCodeCoverage]
     public class WebhookResponse<T>
     {
         public bool Success { get; set; }
